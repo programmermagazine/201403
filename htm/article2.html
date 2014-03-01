@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="../css/pmag.css" type="text/css" />
+</head>
+<body>
+<div id="header_wrap">
+   <h1><a href="https://www.facebook.com/groups/programmerMagazine">程式人雜誌</a> <sub> --  <a href="https://dl.dropbox.com/u/101584453/pmag/201403/htm/home.html">2014 年 3 月號</a> (開放公益出版品)</sub></h1>
+</div>
+<div id="content">
+<div id="TOC">
+<ul>
+<li><a href="#openni-2-基本程式範例-作者-heresy-ku">OpenNI 2 基本程式範例 (作者： Heresy Ku )</a></li>
+</ul>
+</div>
+<h2 id="openni-2-基本程式範例-作者-heresy-ku"><a href="#openni-2-基本程式範例-作者-heresy-ku">OpenNI 2 基本程式範例 (作者： Heresy Ku )</a></h2>
+<p>在前一篇 <a href="http://kheresy.wordpress.com/2012/12/21/basic-openni-2/">《OpenNI 2 簡介》</a> 裡，Heresy 大概解釋了 OpenNI 2.0 的基本功能以及他的架構。而接下來的這一篇，就是要來講怎麼寫 OpenNI 2 的程式了～如果是要了解 OpenNI 1.x 版的程式開發的話，請參考 <a href="http://kheresy.wordpress.com/index_of_openni_and_kinect/documents-of-openni-1-x/">《OpenNI 1.x 教學文章》</a> 這系列的文章。</p>
+<p>首先，在安裝好 OpenNI 2.0 的 SDK 後，在安裝目錄（預設是 C:Files2）裡面，會有下列的資料夾：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">目錄</th>
+<th align="left">用途</th>
+<th align="left">32 位元</th>
+<th align="left">64 位元</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Documentation</td>
+<td align="left">OpenNI SDK 開發程式的參考文件</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Driver</td>
+<td align="left">官方支援硬體的驅動程式</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Include</td>
+<td align="left">程式開發時必須的 header 檔</td>
+<td align="left"><code>$(OPENNI2_INCLUDE)</code></td>
+<td align="left"><code>$(OPENNI2_INCLUDE64)</code></td>
+</tr>
+<tr class="even">
+<td align="left">Lib</td>
+<td align="left">程式開發時必須的 lib 檔</td>
+<td align="left"><code>$(OPENNI2_LIB)</code></td>
+<td align="left"><code>$(OPENNI2_LIB64)</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Redist</td>
+<td align="left">程式執行時必須的 runtime library（dll）</td>
+<td align="left"><code>$(OPENNI2_REDIST)</code></td>
+<td align="left"><code>$(OPENNI2_REDIST64)</code></td>
+</tr>
+<tr class="even">
+<td align="left">Samples</td>
+<td align="left">範例程式</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Tools</td>
+<td align="left">工具，目前只有 NiViewer</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="visualstudio-2010-專案設定"><a href="#visualstudio-2010-專案設定">VisualStudio 2010 專案設定</a></h3>
+<p>而如果是使用 Visual Studio 2010 來開發 OpenNI 2 的程式的話，基本上要在新建立的專案、或是現有專案裡，針對 including 和 linking 做設定，他的基本方法如下（附註 1）：</p>
+<ol style="list-style-type: decimal">
+<li>在專案上方點滑鼠右鍵，點選跳出選單最底下的「Properties」（屬性），叫出專案設定的視窗。 （<a href="http://kheresy.files.wordpress.com/2012/12/open2_pro_ch.jpg">中文版畫面</a> 、<a href="http://kheresy.files.wordpress.com/2012/12/open2_pro_en.jpg">英文版畫面</a> ）</li>
+<li>在左側導覽窗格中的「 <em>Configuration Properties</em> 」（組態屬性）下，可以找到「 <em>C/C++</em> 」，點開後選擇第一項的「 <em>Gerenal</em> 」（一般）後，右側的列表會有一個「 <em>Additional Include Directories</em> 」（其他 Include 目錄）。 要使用 OpenNI 2 的話，就需要在這裡面加入 OpenNI 2 的 header 檔所在的路徑，如果是 32 位元的專案，就是加上 <code>$(OPENNI2_INCLUDE)</code> ，如果是 64 位元的專案，則是加上 <em><code>$(OPENNI2_INCLUDE64)</code></em> 。 （附註 2）</li>
+</ol>
+<div class="figure">
+<img src="../img/open2_pro_inc_en.jpg" alt="（中文版畫面）" /><p class="caption">（中文版畫面）</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>在左側導覽窗格中，剛剛的「C/C++」下方會有一個「Linker」（連結器），點開後，裡面第一個會是「Gerenal」（一般），點選之後，在右側可以找到「Additional Library Directories」（其他程式庫目錄）。 在這裡面加入 OpenNI 2 的 lib 檔、也就是 OpenNI2.lib 這個檔案的所在的路徑，如果是 32 位元的專案，就是加上 <code>$(OPENNI2_LIB)</code> ，如果是 64 位元的專案，則是加上 <code>$(OPENNI2_LIB64)</code>。</li>
+</ol>
+<div class="figure">
+<img src="../img/open2_pro_lib1_en.jpg" alt="（中文版畫面）" /><p class="caption">（中文版畫面）</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>接下來，在左側的「Linker」（連結器）下，「General」（一般）的下面會有一個「Input」（輸入），點選後右邊可以找到「Additional Dependencies」（其他相依性）；在這邊加入 OpenNI 2.0 的 lib 檔檔案名稱，也就是「OpenNI2.lib」。</li>
+</ol>
+<div class="figure">
+<img src="../img/open2_pro_lib2_en.jpg" alt="（中文版畫面）" /><p class="caption">（中文版畫面）</p>
+</div>
+<p>這樣，基本的專案設定就完成了。</p>
+<p>要注意的是，在 Visual Studio 裡，不同的建置組態，例如 debug、release、Win32、x64，這些設定都是不同的～所以如果變更建置組態後，這些設定也是需要另外設定的。 另外，在執行時要注意的是，OpenNI 2 的運作模式和 OpenNI 1.x 不一樣，所以它是設計成讓每個應用程式，可以個別擁有各自的 runtime library（dll 檔）等檔案，所以要執行的時候，就必須要讓程式找的到 OpenNI 2 安裝資料夾中，Redist 目錄下的檔案，否則程式執行時，就會出現找不到 OpenNI2.dll 的錯誤（如下圖）。這點，其實算是比較接近一般 C++ 函式庫的使用方法的。 在 Windows 下，基本上應用程式在執行的時候，會優先去找程式執行的目錄下、是否有所需要的 dll 檔；所以最簡單的方法，就是把 Redist 目錄下所有的檔案，都複製一份到程式執行檔所在目錄就可以了。</p>
+<div class="figure">
+<img src="../img/missoni2dll.jpg" alt="圖、找不到 OpenNI2.dll 的錯誤" /><p class="caption">圖、找不到 OpenNI2.dll 的錯誤</p>
+</div>
+<p>不過如果是在 Visual Srudio 裡面進行開發的話，由於 VisualStduio 是可以設定執行時的工作目錄的，而工作目錄並不一定會是執行檔所在的路徑（預設不是），所以直接把 Redist 目錄下的檔案複製到執行檔所在路徑，在進行偵錯的時候並不一定有用。</p>
+<p>而要確定 Visual Studio 的工作路徑在哪，可以透過點選專案、按右鍵後選擇右鍵選單的「Properties」（屬性），然後在左側選擇「Configuration Properties」（組態屬性）底下的「Debugging」（偵錯）；這之後右邊會有「Working Directory」（工作目錄），他的值就代表了在透過 VisualStudio 針對這個專案進行偵錯時，他的工作目錄（英文版螢幕截圖、中文版螢幕截圖）。而如果是 Visual Studio 的預設值的話，他的值應該是「 <code>$(ProjectDir)</code> 」，也就是專案所在目錄（vcxproj 檔所在的地方）。</p>
+<p>這時候可以採取的方法主要有幾種：</p>
+<ol style="list-style-type: decimal">
+<li>將 OpenNI2 Redist 目錄下所有的檔案，都複製到專案所在目錄。</li>
+<li>修改 VisualStudio 偵錯階段的工作路徑，例如修改成 <code>$(OPENNI2_REDIST)</code> 。</li>
+<li>將 <code>$(OPENNI2_REDIST)</code> 加入到系統路徑（參考）。</li>
+</ol>
+<p>哪種方法好？基本上是看狀況，見仁見智的。由於很多時候，程式還會用到其他函式庫，也有可能會需要用到他們各自的 dll 檔，所以把這些 dll 檔統一放在一起，其實也是一種解決方案。</p>
+<h3 id="基礎流程"><a href="#基礎流程">基礎流程</a></h3>
+<p>在專案設定好後，要使用 OpenNI 2 來讀取感應器的資料的話，他的基本流程，大致如下：</p>
+<ol style="list-style-type: decimal">
+<li><code>include OpenNI.h</code> 這個檔案。之後，<code>OpenNI C++ API</code> 的東西，都會在 openni 這個 namespace 下。</li>
+<li>呼叫 <code>openni::OpenNI::initialize()</code> 這個函式來完成 OpenNI 2 環境的初始化。</li>
+<li>宣告一個 <code>openni::Device</code> 的物件，並透過他所提供的 <code>open()</code> 這個函式，來完成裝置初始化。
+<ul>
+<li>3.1 如果有多個裝置，想要指定要用哪個裝置的話，需要先透過 <code>openni::OpenNI::enumerateDevices()</code> 這個函式，來取得可使用的裝置列表，再透過指定 URI 的方式，來指定要開啟哪個裝置。</li>
+<li>3.2 如果沒有要特別指定的話，則是以 <code>openni::ANY_DEVICE</code> 當作 URI，讓系統自動決定要使用哪個裝置。</li>
+</ul></li>
+<li>建立 <code>openni::VideoStream</code> 的物件，透過他的 <code>create()</code> 這個函式，指定這個 video stream 要使用哪個裝置的哪種感應器（紅外線、彩色影像、深度影像）。 建立完成後，則是可以透過 <code>start()</code> 和 <code>stop()</code>，來控制資料的讀取。</li>
+<li>進入主迴圈，如果要讀取 video stream 當下的資料的話，則是呼叫 VideoStream 所提供的 <code>readFrame()</code> 這個函式，來把資料寫到 openni::VideoFrameRef 裡；而之後則是再透過 VideoFrameRef 所提供的函式，來做資料處理。</li>
+<li>當不再需要使用感應器的資料的時候，要記得關閉所建立出來的資料。
+<ul>
+<li>6.1 呼叫 <code>openni::VideoStream</code> 的 <code>destory()</code> 這個函式，關閉 video stream。</li>
+<li>6.2 呼叫 <code>openni::Device</code> 的 <code>close()</code>，關閉裝置。</li>
+</ul></li>
+<li>最後，則是呼叫 <code>openni::OpenNI::shutdown()</code>，來關閉整個 OpenNI 的環境。</li>
+</ol>
+<h3 id="簡單的範例"><a href="#簡單的範例">簡單的範例</a></h3>
+<p>上面是用文字來做描述，實際上寫成程式碼，就會類似 OpenNI 官方所提供的「SimpleRead」這個範例一樣（預設位置在 <code>C:\Program Files\OpenNI2\Samples\SimpleRead</code> ）。而下面，Heresy 則是在把程式碼做進一步的簡化（主要是刪掉錯誤偵測的部分），變成：</p>
+<pre class="sourceCode CPP"><code class="sourceCode cpp"><span class="co">// STL Header</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+ 
+<span class="co">// 1. include OpenNI Header</span>
+<span class="ot">#include &quot;OpenNI.h&quot;</span>
+ 
+<span class="dt">int</span> main( <span class="dt">int</span> argc, <span class="dt">char</span>** argv )
+{
+  <span class="co">// 2. initialize OpenNI</span>
+  openni::OpenNI::initialize();
+   
+  <span class="co">// 3. open a device</span>
+  openni::Device devAnyDevice;
+  devAnyDevice.open( openni::ANY_DEVICE );
+   
+  <span class="co">// 4. create depth stream</span>
+  openni::VideoStream streamDepth;
+  streamDepth.create( devAnyDevice, openni::SENSOR_DEPTH );
+  streamDepth.start();
+   
+  <span class="co">// 5 main loop, continue read</span>
+  openni::VideoFrameRef frameDepth;
+  <span class="kw">for</span>( <span class="dt">int</span> i = <span class="dv">0</span>; i &lt; <span class="dv">100</span>; ++ i )
+  {
+    <span class="co">// 5.1 get frame</span>
+    streamDepth.readFrame( &amp;frameDepth );
+     
+    <span class="co">// 5.2 get data array</span>
+    <span class="dt">const</span> openni::DepthPixel* pDepth 
+            = (<span class="dt">const</span> openni::DepthPixel*)frameDepth.getData();
+     
+    <span class="co">// 5.3 output the depth value of center point</span>
+    <span class="dt">int</span> idx = frameDepth.getWidth() * ( frameDepth.getHeight() + <span class="dv">1</span> ) / <span class="dv">2</span>;
+    std::cout &lt;&lt; pDepth[idx] &lt;&lt; std::endl;
+  }
+   
+  <span class="co">// 6. close</span>
+  streamDepth.destroy();
+  devAnyDevice.close();
+   
+  <span class="co">// 7. shutdown</span>
+  openni::OpenNI::shutdown();
+   
+  <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre>
+<p>程式碼的內容，大致上就如同上一個段落所說明的，所以基本上這邊就只針對部分地方做補充的說明。 首先是第四部份，建立 VideoStream 的部分。這邊基本上是透過 VideoStream 物件（devAnyDevice）本身的 <code>create()</code> 函式，來指定這個 video stream 要使用哪個裝置的哪種感應器；在這個例子裡，所使用的是 <code>openni::SENSOR_DEPTH</code>，也就是深度感應器的部分。而在目前的 OpenNI 2 裡，除了 SENSOR_DEPTH 外，還有對應到彩色影像的 SENSOR_COLOR，以及對應到紅外線影像的 SENSOR_IR 可以使用。</p>
+<p>而在資料讀取、也就是「5」的部分，在透過 VideoStream 的 <code>readFrame(</code>) 這個函式，把這個時間點的影像資料，寫到 VideoFrameRef 後，要讀取深度資料，就是要透過 VideoFrameRef 的物件（frameDepth）來做存取了～在一般狀況下，主要是透過他的 getWidth() 和 getHeight() 這兩個函式，來取得這個影像的大小。而透過 getData()，則可以取得這個影像的資料；他所回傳的型別，是無型別的指標、 <code>void*</code> ，實際上是指到一個儲存影像資料的陣列的指標。 由於 OpenNI 2 把影像資料的讀取統一化了，同時也把 OpenNI 1.x 的 MapMetaData 的概念拿掉了，所以在資料的讀取上，會變得比較「低階」一點。首先，如果要做資料的讀取，需要自己根據影像的類型，來做轉型的動作。像在這邊由於是使用深度感應器，影像中每一個像素的資料型別都是 <code>openni::DepthPixel</code>；所以在這邊，就是需要把 <code>void*</code> 強制轉型成為 DepthPixel 的指標來使用（上方範例 5.2 的部分）（附註 3）。</p>
+<p>經過這樣的處理，pDpeth 就是一個指到這張深度影像資料的一維振烈的指標，而這個陣列的大小，就是他的寬（透過 <code>getWidth()</code> 取得）乘上高（透過 <code>getHieght()</code> 取得）；如果是 <code>640 x 480</code> 的話，pDpeth 所指到的陣列，大小就是 <code>640 x480 = 307,200</code> 了～而其中每一項，都代表一個點的深度；如果是要取得 ( x, y ) 這個點的值的話，就是要做一個簡單的座標換算，去取得他在陣列中的 index。這個基本的換算公式，就是：</p>
+<blockquote>
+<p>int idx = x + y * width;</p>
+</blockquote>
+<p>只要把 x 和 y 帶入上面的公式，就可以簡單地算出每一個點在陣列中的位置，並取出他的值了。 而如果是要使用彩色影像的話，他預設的型別是 <code>openni::RGB888Pixel</code> 這個 structure，裡面是以三個 unsigned char 的變數，分別儲存著 RGB 三種顏色的值；而如果是紅外線影像的話，型別則是 <code>openni::Grayscale16Pixel</code> ，實際型別則是和 DepthPixel 一樣，是 unsigned short。</p>
+<h3 id="小結"><a href="#小結">小結</a></h3>
+<p>這篇算是 OpenNI 2 的第一篇教學文章，就先寫到這了～這邊的範例，基本上應該就算是一個算是最簡單，透過 OpenNI 2 來做深度資料讀取的範例了；其中有很大的篇幅，其實是在講如何設定專案就是了。</p>
+<p>而這個範例程式在執行後，會讀取深度感應器的 100 個畫面，並把影像中樣的深度值做輸出，所以在執行後，會看到畫面上有一堆數字出現；由於這部分的程式並沒有繪圖的部分，所以執行後只會看到一串數字，是不會有影像出現的。</p>
+<p>實際上，這個範例程式比較好的寫法，應該還是要像官方的「SimpleRead」這個範例一樣，加上錯誤偵測會更好，不過這邊為了篇幅，還是先把它拿掉了。而另外，這邊基本上是只針對單一個 video stream 做操作的寫法，如果是要同時讀取的彩色影像和深度影像的話，則可能還要再做一點的修改。</p>
+<p>接下來…就期待下一篇文章吧～</p>
+<h3 id="附註"><a href="#附註">附註</a></h3>
+<ol style="list-style-type: decimal">
+<li>這邊的英文版是 Visual Studio 2010 的畫面、文字，中文版則是 Visual Studio 2012 的畫面與文字；不同的版本、不同的設定，選項可能會不盡相同，請自行根據狀況調整。 如果有多個項目的話，可以用「;」做區隔。</li>
+<li>在 OpenNI 2 裡面，透過 Kinect 或 Xtion 取得的深度影像的每一個像素、DepthPixel 的單位，預設應該還是一樣是「mm」（公釐、毫米）；不過實際上，他也有定義了幾種不同的 PixelFormat，代表其實是有可能可以娶到其他單位的深度的～所以其實要比較保險一點的話，還是得檢查 VideoMode 裡的 PixelFormat，才能確定 DepthPixel 代表的意義。</li>
+</ol>
+<p>【本文來自 Heresy's Space 的網誌，原文網址為： <a href="http://kheresy.wordpress.com/2012/12/24/openni2-basic-example/">http://kheresy.wordpress.com/2012/12/24/openni2-basic-example/</a> ，由 Heresy 捐出網誌給程式人雜誌，經陳鍾誠編輯後納入雜誌】</p>
+</div>
+<div id="footer">
+<a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌</a> ，採用 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/ ">創作共用：姓名標示、相同方式分享</a> 授權，歡迎加入 <a href="https://www.facebook.com/groups/programmerMagazine/">雜誌社團</a>
+</div>
+</body>
+</html>

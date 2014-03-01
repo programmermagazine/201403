@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../css/pmag.css" type="text/css" />
+</head>
+<body>
+<div id="header_wrap">
+   <h1><a href="https://www.facebook.com/groups/programmerMagazine">程式人雜誌</a> <sub> --  <a href="https://dl.dropbox.com/u/101584453/pmag/201403/htm/home.html">2014 年 3 月號</a> (開放公益出版品)</sub></h1>
+</div>
+<div id="content">
+<div id="TOC">
+<ul>
+<li><a href="#arduino入門教學15-amarino-的-sensorgraph-範例程式-作者cooper-maa">Arduino入門教學(15) – Amarino 的 SensorGraph 範例程式 (作者：Cooper Maa)</a></li>
+</ul>
+</div>
+<h2 id="arduino入門教學15-amarino-的-sensorgraph-範例程式-作者cooper-maa"><a href="#arduino入門教學15-amarino-的-sensorgraph-範例程式-作者cooper-maa">Arduino入門教學(15) – Amarino 的 SensorGraph 範例程式 (作者：Cooper Maa)</a></h2>
+<p>這篇是寫給 amarino 初學者看的，目的是教導你如何執行 Amarino 的 SensorGraph 範例程式。</p>
+<h3 id="所需材料"><a href="#所需材料">所需材料</a></h3>
+<ul>
+<li>Android 手機一支</li>
+<li>Arduino x1</li>
+<li>bluetooth module x 1</li>
+<li>可變電阻或光敏電阻 (Light dependent resistor) x 1</li>
+</ul>
+<h3 id="step-1安裝-amarino"><a href="#step-1安裝-amarino">Step 1：安裝 Amarino</a></h3>
+<p>到 <a href="http://www.amarino-toolkit.net/">http://www.amarino-toolkit.net/</a> 下載下列 App 並安裝到 Android 手機上：</p>
+<ol style="list-style-type: decimal">
+<li><p><a href="http://code.google.com/p/amarino/downloads/detail?name=Amarino_2_v0_55.apk&amp;can=2&amp;q=">Amarino</a></p></li>
+<li><p><a href="http://code.google.com/p/amarino/downloads/detail?name=AmarinoPluginBundle.apk&amp;can=2&amp;q=">Amarino Plug-in Bundle</a></p></li>
+<li><p><a href="http://code.google.com/p/from-arduino-to-android-to-arduino/downloads/detail?name=SensorGraph-1.apk&amp;can=2&amp;q=">SensorGraph</a> (這是 buildcircuit.com 的版本)</p></li>
+</ol>
+<h3 id="step-2-安裝-arduino-ide-與-meetandroid-library"><a href="#step-2-安裝-arduino-ide-與-meetandroid-library">Step 2: 安裝 Arduino IDE 與 MeetAndroid Library</a></h3>
+<p>如果你電腦上還沒有 Arduino IDE，請先到 <a href="http://arduino.cc/en/Main/Software">http://arduino.cc/en/Main/Software</a> 下載軟體，下載後解壓縮即可。</p>
+<p>接著下載 <a href="http://code.google.com/p/amarino/downloads/detail?name=MeetAndroid_4.zip&amp;can=2&amp;q=">MeetAndroid Library</a> ，把 MeetAndroid 解到 Arduino IDE 安裝目錄下的 libraries 資料夾下。</p>
+<p>重新啟動 Arduino IDE，在 Sketch &gt; Import Library 底下應該會看到 MeetAndroid，如下圖：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph1.png" />
+</div>
+<h3 id="step-3連接可變電阻或光敏電阻"><a href="#step-3連接可變電阻或光敏電阻">Step 3：連接可變電阻或光敏電阻</a></h3>
+<p>參考下圖，把可變電阻中間腳位接到 Analog Input pin 5，剩下的兩支腳位，一支接到 5V，另外一支接到 GND：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph2.png" />
+</div>
+<p>如果你使用的是光敏電阻，電路的接法請參考 <a href="http://coopermaa2nd.blogspot.com/2010/12/arduino-lab8-led.html">這篇</a> 。</p>
+<h3 id="step-4-上傳-sensorgraph-tutorial-程式"><a href="#step-4-上傳-sensorgraph-tutorial-程式">Step 4： 上傳 SensorGraph Tutorial 程式</a></h3>
+<p>點 File &gt; Examples &gt; MeetAndroid &gt; SensorGraph Tutorial 打開 SensorGraph Tutorial 程式：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph3.png" />
+</div>
+<p>程式所用的 baud rate 預設是 57600 bps，如果你的藍芽模組不是 57600 bps，請做適當的調整：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph4.png" />
+</div>
+<p>然後把程式上傳到 Arduino 板子上。</p>
+<h3 id="step-5連接藍芽模組"><a href="#step-5連接藍芽模組">Step 5：連接藍芽模組</a></h3>
+<p>我用的是 <a href="http://www.wavesen.com/">廣州匯承信息科技</a> 的 HC-0x 系列藍芽模組，下圖是 HC-0x 藍芽模組的外觀：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph5.png" alt="▲ HC-0x 藍芽模組 (圖左：正面圖，圖右：背面圖）" /><p class="caption">▲ HC-0x 藍芽模組 (圖左：正面圖，圖右：背面圖）</p>
+</div>
+<p>這個藍芽模組連接方法很簡單，照下表把 Arduino 和藍芽模組連接起來就好：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Arduino</th>
+<th align="left">藍芽模組</th>
+<th align="left">備註</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">5V</td>
+<td align="left">VCC</td>
+<td align="left">注意電源不可接錯</td>
+</tr>
+<tr class="even">
+<td align="left">GND</td>
+<td align="left">GND</td>
+<td align="left">注意電源不可接錯</td>
+</tr>
+<tr class="odd">
+<td align="left">RXD</td>
+<td align="left">TXD</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">TXD</td>
+<td align="left">RXD</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph6.png" />
+</div>
+<p>連接的時候有兩點要注意：第一是電源千萬不可接錯，不然可能會把藍芽模組燒壞，第二是 Arduino 的 RXD 要接藍芽模組的 TXD，而 Arduino 的 TXD 要接藍芽模組的 RXD。</p>
+<p>通電之後，藍芽模組上的 LED 會一直閃爍：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph7.png" />
+</div>
+<h3 id="step-6執行-sensorgraph-app"><a href="#step-6執行-sensorgraph-app">Step 6：執行 SensorGraph App</a></h3>
+<p>首先，先利用 Amarino 搜尋藍芽設備，找到設備後，將藍芽設備的 MAC Address 抄起來（ <em>記得不要在 Amarino 設定任何 Event！</em> ）：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph8.png" />
+</div>
+<p>打開 SensorGraph App，輸入剛剛抄下來的 MAC Address，然後按下【Set Device ID】：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph9.png" />
+</div>
+<p>如果一切順利，Android 手機就會跟 Arduino 建立連線，並且呈現如下圖的畫面。其中，畫面上方會繒製感測讀值的圖形，而下方則顯示其即時數值（至於最底下的 SeekBar，因為我們沒有用到，所以可以忽略不管）：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph10.png" />
+</div>
+<h3 id="示範影片"><a href="#示範影片">示範影片</a></h3>
+<ul>
+<li><a href="http://www.youtube.com/watch?v=gn_-OjxvRjk">示範影片：sensor graph with LED controller</a></li>
+</ul>
+<h3 id="參考資料"><a href="#參考資料">參考資料</a></h3>
+<ul>
+<li><a href="http://www.buildcircuit.com/sensorgraph-using-android-amarino-and-arduino/">SensorGraph using Android, Amarino and Arduino</a></li>
+<li><a href="http://www.bygriz.com/portfolio/sensor-graph/#more-1344">Sensor Graph</a></li>
+<li><a href="http://coopermaa2nd.blogspot.tw/2012/06/amarino-android-arduino.html">以 Amarino 連接 Android 與 Arduino</a></li>
+</ul>
+<p>【本文作者為馬萬圳，原文網址為： <a href="http://coopermaa2nd.blogspot.tw/2012/06/sensorgraph.html">http://coopermaa2nd.blogspot.tw/2012/06/sensorgraph.html</a> ，由陳鍾誠編輯後納入本雜誌】</p>
+</div>
+<div id="footer">
+<a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌</a> ，採用 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/ ">創作共用：姓名標示、相同方式分享</a> 授權，歡迎加入 <a href="https://www.facebook.com/groups/programmerMagazine/">雜誌社團</a>
+</div>
+</body>
+</html>

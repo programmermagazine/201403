@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="../css/pmag.css" type="text/css" />
+</head>
+<body>
+<div id="header_wrap">
+   <h1><a href="https://www.facebook.com/groups/programmerMagazine">程式人雜誌</a> <sub> --  <a href="https://dl.dropbox.com/u/101584453/pmag/201403/htm/home.html">2014 年 3 月號</a> (開放公益出版品)</sub></h1>
+</div>
+<div id="content">
+<div id="TOC">
+<ul>
+<li><a href="#從程式人的角度證明哥德爾不完備定理">從程式人的角度證明「哥德爾不完備定理」</a></li>
+</ul>
+</div>
+<h2 id="從程式人的角度證明哥德爾不完備定理"><a href="#從程式人的角度證明哥德爾不完備定理">從程式人的角度證明「哥德爾不完備定理」</a></h2>
+<p>1900 年，德國的偉大數學家希爾伯特 (Hilbert)，提出了著名的 23 個數學問題，其中的第二個問題如下所示。</p>
+<blockquote>
+<p>證明算術公理系統的無矛盾性 The compatibility of the arithmetical axioms.</p>
+</blockquote>
+<p>在上述問題中，希爾伯特的意思是要如何證明算術公理系統的 Compatibility，Compatibility 這個詞意謂著必須具有「一致性」 (Consistency) 與「完備性」(Completeness)。</p>
+<p>為此、許多數學家花費了一輩子的心力，企圖建構出一個「既一致又完備」的邏輯推論系統，像是「羅素與懷德海」就寫了一本「數學原理」，希望為數學建構出非常扎實的「公理系統」。</p>
+<p>結果、這樣的企圖心被哥德爾的一個定理給毀了，那個定理就是「哥德爾不完備定理」。</p>
+<p>要瞭解「哥德爾不完備定理」之前，最好先瞭解一下「邏輯悖論」這個概念。</p>
+<p>當初、羅素在努力的建構數學原理時，卻發現了數學中存在著邏輯悖論，於是發出感嘆：「當我所建構的科學大廈即將完工之時，卻發現它的地基已經動搖了...」。</p>
+<p>羅素的話，其原文是德文，據說翻譯成英文之後意義如下：</p>
+<blockquote>
+<p>Hardly anything more unwelcome can befall a scientific writer than that one of the foundations of his edifice be shaken after the work is finished</p>
+</blockquote>
+<p>結果，在 1950年，羅素穫得諾貝爾文學獎 (天啊！羅素不是數學家嗎！但是看他上面那句話的文筆，我很能體會他得諾貝爾文學獎的原因了 ...)</p>
+<h3 id="理髮師悖論"><a href="#理髮師悖論">理髮師悖論</a></h3>
+<p>理髮師悖論可以描述如下：</p>
+<blockquote>
+<p>在某一個小世界裏，有一個理髮師，他宣稱要為該世界中所有不自己理頭髮的人理髮，但是不為任何一個自己理頭髮的人理髮！</p>
+<p>請問、他做得到嗎？</p>
+</blockquote>
+<p>您覺得呢？</p>
+<p>這個問題的答案是，他絕對做不到，原因出在他自己身上：</p>
+<blockquote>
+<p>如果他「為」自己理頭髮，那麼他就為「一個自己理頭髮的人理髮」，違反了後面的宣言。</p>
+<p>如果他「不為」自己理頭髮，那麼他就沒有為「該世界中 &quot;所有&quot; 不自己理頭髮的人理髮」，因此違反了前面的宣言。</p>
+</blockquote>
+<p>於是、他理也不是、不理也不是，這就像中國傳說故事裏「矛與盾」的故事一樣，他的問題陷入兩難，產生「矛盾」了。</p>
+<p>所以、該理髮師想做的事情是不可能做得到的！</p>
+<p>這樣的悖論，在邏輯與電腦的理論裏有很深遠的影響，哥德爾正是因為找到了邏輯體系的悖論而發展出「哥德爾不完備定理」，而電腦之父圖靈也事發現了「停止問題」會造成悖論而證明了有些事情電腦做不到 ....</p>
+<h3 id="哥德爾不完備定理的描述"><a href="#哥德爾不完備定理的描述">哥德爾不完備定理的描述</a></h3>
+<p>當初「哥德爾」提出的「不完備定理」，大致有下列兩種描述方法，後來簡稱為「哥德爾第一不完備定理」與「哥德爾第二不完備定理」，如下所示。</p>
+<p>哥德爾第一不完備定理</p>
+<blockquote>
+<p>定理 G1：若公理化邏輯系統 T 是個包含基本算術 (皮諾公設)的一致性系統，那麼 T 中存在一種語句 S，但是你無法用 T 證明 S ，卻也無法否證 S。</p>
+</blockquote>
+<p>哥德爾第二不完備定理</p>
+<blockquote>
+<p>定理 G2：若公理化邏輯系統 T 是個包含基本算術 (皮諾公設)的一致性系統，那麼 T 無法證明自己的一致性。</p>
+</blockquote>
+<p>但是、對於「程式人」而言，上述描述都太邏輯了，讓我們改用「程式人」的角度來看這個問題，提出另一種「程式型版本」的說法：</p>
+<p>哥德爾不完備定理的程式型：</p>
+<blockquote>
+<p>定理 G3：不存在一個程式，可以正確判斷一個「包含算術的一階邏輯字串」是否為定理。</p>
+</blockquote>
+<h3 id="哥德爾不完備定理的程式型證明"><a href="#哥德爾不完備定理的程式型證明">哥德爾不完備定理的程式型證明</a></h3>
+<p>接著、就讓我們來「證明」一下上述的程式型「哥德爾不完備定理」吧！</p>
+<p>由於牽涉到矛盾，所以我們將採用反證法：</p>
+<p>證明：</p>
+<p>假如這樣一個程式存在，那麼代表我們可以寫出一個具有下列功能的函數。</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="fu">Proveable</span>(str)
+  <span class="kw">if</span> (str is a theorem) 
+    <span class="kw">return</span> <span class="dv">1</span>;           
+  <span class="kw">else</span>                  
+    <span class="kw">return</span> <span class="dv">0</span>;           
+end</code></pre>
+<p>這樣的函數本身，並不會造成甚麼問題，「包含算術的一階邏輯」(簡稱為 AFOL) 夠強，強到可以用邏輯式描述 Provable(str) 這件事，因此我們可以寫出 <code>Provable(s)</code> 這樣一個邏輯陳述。</p>
+<p>更厲害的是，我們也可以將一個字串在 AFOL 裏，是否為定理這件事情，寫成邏輯陳述 (註：邏輯符號 ∃ 代表存在，- 代表 not， &amp; 代表 and， | 代表 or)。</p>
+<p>接著、我們就可以問一個奇怪的問題了！那個問題描述如下。</p>
+<blockquote>
+<p>請問 isTheorem(∃s -Provable(s) &amp; -Provable(-s)) 是否為真呢？</p>
+</blockquote>
+<p>讓我們先用 T 代表 ∃s -Provable(s) &amp; -Provable(-s) 這個邏輯式的字串，然後分別討論「真假」這兩個情況：</p>
+<ol style="list-style-type: decimal">
+<li><p>如果 isTheorem(T) 為真，那麼代表存在無法證明的定理，也就是 Provable 函數沒辦法證明所有的定理。</p></li>
+<li><p>如果 isTheorem(T) 為假，那麼代表 -T 應該為真。這樣的話，請問 Provable(-T) 會傳回甚麼呢？讓我們分析看看：</p></li>
+</ol>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="fu">Proveable</span>(-T)
+  <span class="kw">if</span> (-T is a theorem) <span class="co">// 2.1 這代表 -(∃s -Provable(s) &amp; -Provable(-s)) 是個定理，也就是 Provable() 可以正確證明所有定理。</span>
+    <span class="kw">return</span> <span class="dv">1</span>;          <span class="co">//     但這樣的話，就違反了上述 「2. 如果 isTheorem(T) 為假」的條件了。</span>
+  <span class="kw">else</span>                 <span class="co">// 2.2 否則代表 -T 不是個定理，也就是存在 (∃) 某些定理 s 是無法證明的。</span>
+    <span class="kw">return</span> <span class="dv">0</span>;          <span class="co">//     但這樣的話，又違反上述「2. 如果 isTheorem(T) 為假」的條件了。</span>
+end</code></pre>
+<p>於是我們斷定：如果 Provable() 對所有輸入都判斷正確的話，那麼 2 便是不可能的，因為 (2.1, 2.2) 這兩條路都違反 2 的假設，也就是只有 1 是可能的，所以我們可以斷定 Provable(s) 沒辦法正確證明所有定理。</p>
+<h3 id="結語"><a href="#結語">結語</a></h3>
+<p>在本文中，我們沒有寫出 Provable(s) 的邏輯陳述，也沒有寫出 isTheorem() 的邏輯陳述，因為這需要對「程式的指令集」，也就是 CPU 做一個邏輯描述，這樣說來故事就太長了！</p>
+<p>而這個 CPU，通常後來的「計算理論」書籍裏會用「圖靈機」來描述，但這並不是哥德爾當初的證明，因為「哥德爾證明不完備定理」的年代，圖靈還沒有提出「圖靈機」的概念。</p>
+<p>事實上、當初「哥德爾」的證明，根本也沒有「程式與電腦的概念」，所以「哥德爾」花了很多力氣建構了一個「哥德爾化的字串編碼概念」，這種字串編碼是建構在包含「+, *」兩個運算的算術系統上，也就是「皮亞諾公設」所描述的那種系統。這也是為何要引進「算術」到一階邏輯中，才能證明「哥德爾不完備定理」的原因了。</p>
+<p>1931 年「哥德爾」證明出「不完備定理」之後，後來「圖靈」於 1936 年又提出了一個電腦絕對無法完全做到的「停止問題」(Halting Problem)，該問題乃是希望設計出一個函數 isHalting(code, data) ，可以判斷程式 code 在輸入 data 之後會不會停，也就是 code(data) 會不會停。圖靈利用圖靈機的架構，證明了該問題同樣是不可判定的，也就是沒有任何一個程式可以完全正確的判定這樣的問題。</p>
+<p>「圖靈」的手法，與「哥德爾」非常類似，但是卻又更加簡單清楚。(不過既使如此，我還是很難直接理解圖靈的證明，因為本人在碩博士時連續被「圖靈機」荼毒了兩次，再也不希望跟「圖靈機」有任何瓜葛了 ....)</p>
+<p>但是、我們仍然希望能夠讓「對程式有興趣」的朋友們，能夠清楚的理解「圖靈」與「哥德爾」在「計算理論」上的成就與貢獻，以免過於自大的想寫出一個「可以解決所有問題的程式」，我想只有站在前人的肩膀上，才能看清楚「程式」到底是個甚麼東西吧！</p>
+<p>(當然、其實想要「寫出一個可以解決所有問題的程式」是非常好的想法。雖然「圖靈」與「哥德爾」已經都告訴過我們這是不可能的，但是身為一個程式人，就應該有挑戰不可能任務的決心，不是嗎？ ........ 雖然、不一定要去做這種不可能的問題啦 ....)</p>
+<h3 id="參考文獻"><a href="#參考文獻">參考文獻</a></h3>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Russells_paradox">Wikipedia:Russell's paradox</a></li>
+<li><a href="http://zh.wikipedia.org/wiki/%E7%BD%97%E7%B4%A0%E6%82%96%E8%AE%BA">維基百科:羅素悖論</a></li>
+<li><a href="http://www.apronus.com/math/goedel.htm">An Outline of the Proof of Gödel's Incompleteness Theorem</a>, All essential ideas - without the final technical details.</li>
+<li><a href="http://www.math.hawaii.edu/~dale/godel/godel.html">Godel's Incompleteness Theorem</a>, By Dale Myers</li>
+<li><a href="http://blog.sina.com.cn/s/blog_71329a960100sauh.html">哥德尔轶事</a></li>
+<li><a href="http://sammelpunkt.philo.at:8080/1126/1/Bagaria.pdf">A Short Guide to Godel's Second Incomplete Theorem (PDF)</a>, Joan Bagaria.</li>
+<li><a href="http://en.wikipedia.org/wiki/Proof_sketch_for_G%C3%B6del%27s_first_incompleteness_theorem">Wikipedia:Proof sketch for Gödel's first incompleteness theorem</a></li>
+</ul>
+<p>【本文由陳鍾誠取材並修改自 <a href="http://zh.wikipedia.org/">維基百科</a>，採用創作共用的 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 授權】</p>
+</div>
+<div id="footer">
+<a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌</a> ，採用 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/ ">創作共用：姓名標示、相同方式分享</a> 授權，歡迎加入 <a href="https://www.facebook.com/groups/programmerMagazine/">雜誌社團</a>
+</div>
+</body>
+</html>

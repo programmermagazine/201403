@@ -1,0 +1,1877 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="2014 年 3 月號" />
+  <title>程式人雜誌</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="../css/pmag.css" type="text/css" />
+</head>
+<body>
+<div id="header_wrap">
+   <h1><a href="https://www.facebook.com/groups/programmerMagazine">程式人雜誌</a> <sub> --  <a href="https://dl.dropbox.com/u/101584453/pmag/201403/htm/home.html">2014 年 3 月號</a> (開放公益出版品)</sub></h1>
+</div>
+<div id="content">
+<div id="header">
+<h1 class="title"><a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌</a></h1>
+<h2 class="author">2014 年 3 月號</h2>
+<h3 class="date">本期焦點：邏輯推論的歷史</h3>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#前言">前言</a><ul>
+<li><a href="#編輯小語">編輯小語</a></li>
+<li><a href="#授權聲明">授權聲明</a></li>
+</ul></li>
+<li><a href="#本期焦點">本期焦點</a><ul>
+<li><a href="#數學短訊邏輯世界的歷史">數學短訊：邏輯世界的歷史</a></li>
+<li><a href="#布林邏輯與推論系統----何謂嚴格的數學證明">布林邏輯與推論系統 -- 何謂嚴格的數學證明？</a></li>
+<li><a href="#謂詞邏輯一階邏輯與哥德爾完備定理">謂詞邏輯、一階邏輯與「哥德爾完備定理」</a></li>
+<li><a href="#從程式人的角度證明哥德爾不完備定理">從程式人的角度證明「哥德爾不完備定理」</a></li>
+</ul></li>
+<li><a href="#人物速寫">人物速寫</a><ul>
+<li><a href="#橫跨數學哲學文學的諾貝爾大師伯特蘭羅素-bertrand-arthur-william-russell">橫跨「數學、哲學、文學」的諾貝爾大師：伯特蘭·羅素 (Bertrand Arthur William Russell)</a></li>
+<li><a href="#偉大數學家的悲慘人生----圖靈牛頓哥德爾">偉大「數學家」的悲慘人生 -- 圖靈、牛頓、哥德爾</a></li>
+</ul></li>
+<li><a href="#程式人文集">程式人文集</a><ul>
+<li><a href="#arduino入門教學15-amarino-的-sensorgraph-範例程式-作者cooper-maa">Arduino入門教學(15) – Amarino 的 SensorGraph 範例程式 (作者：Cooper Maa)</a></li>
+<li><a href="#openni-2-基本程式範例-作者-heresy-ku">OpenNI 2 基本程式範例 (作者： Heresy Ku )</a></li>
+<li><a href="#根號求解-作者bridan">根號求解 (作者：Bridan)</a></li>
+<li><a href="#visual-basic-6.0大整數運算-加法與乘法-使用-array-字串-作者廖憲得-0xde">Visual Basic 6.0:大整數運算 加法與乘法 (使用 Array 字串) (作者：廖憲得 0xde)</a></li>
+<li><a href="#開放電腦計畫-9-16-位元微控制器-mcu0-的輸出入----輪詢篇-作者陳鍾誠">開放電腦計畫 (9) – 16 位元微控制器 MCU0 的輸出入 -- 輪詢篇 (作者：陳鍾誠)</a></li>
+</ul></li>
+<li><a href="#雜誌訊息">雜誌訊息</a><ul>
+<li><a href="#讀者訂閱">讀者訂閱</a></li>
+<li><a href="#投稿須知">投稿須知</a></li>
+<li><a href="#參與編輯">參與編輯</a></li>
+<li><a href="#公益資訊">公益資訊</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="前言"><a href="#前言">前言</a></h1>
+<h2 id="編輯小語"><a href="#編輯小語">編輯小語</a></h2>
+<p>在本期的「程式人雜誌」中，聚焦的主題是「邏輯推論的歷史」，包含理論與演進過程！</p>
+<p>邏輯推論在「離散數學」「計算理論」與「人工智慧」當中通常是課程的焦點之一，也是電腦的重要技術之一，理解邏輯理論與歷史可以讓程式人具備足夠的理論基礎，對修鍊「內功」是有些幫助的。</p>
+<p>當然、本期不只有「邏輯推論」的相關文章，還有更精彩的 Arduino, VB, OpenNI, 開放電腦計畫等內容，希望讀者會喜歡這期的「程式人雜誌」！</p>
+<p>---- （程式人雜誌編輯 - 陳鍾誠）</p>
+<h2 id="授權聲明"><a href="#授權聲明">授權聲明</a></h2>
+<p>本雜誌許多資料修改自維基百科，採用 創作共用：<a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 授權，若您想要修改本書產生衍生著作時，至少應該遵守下列授權條件：</p>
+<ol style="list-style-type: decimal">
+<li>標示原作者姓名 (包含該文章作者，若有來自維基百科的部份也請一併標示)。</li>
+<li>採用 創作共用：<a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 的方式公開衍生著作。</li>
+</ol>
+<p>另外、當本雜誌中有文章或素材並非採用 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 時，將會在該文章或素材後面標示其授權，此時該文章將以該標示的方式授權釋出，請修改者注意這些授權標示，以避免產生侵權糾紛。</p>
+<p>例如有些文章可能不希望被作為「商業性使用」，此時就可能會採用創作共用：<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/tw/">姓名標示、非商業性、相同方式分享</a> 的授權，此時您就不應當將該文章用於商業用途上。</p>
+<p>最後、懇請勿移除公益捐贈的相關描述，以便讓愛心得以持續散播！</p>
+<h1 id="本期焦點"><a href="#本期焦點">本期焦點</a></h1>
+<h2 id="數學短訊邏輯世界的歷史"><a href="#數學短訊邏輯世界的歷史">數學短訊：邏輯世界的歷史</a></h2>
+<h3 id="簡介"><a href="#簡介">簡介</a></h3>
+<p>邏輯學是西方科學中淵遠流長的一門學問，從西元前 350 年亞里斯多德的三段論開始，就開啟了歐洲文明對邏輯學的興趣之窗。然而這一個興趣同樣隨著西方文明的發展而起伏不定，直到西元 1850 年左右，George Boole (布爾) 開始研究布林代數，才讓邏輯學成為近代數學的一個重要領域。接著，Gottlob Frege 在 1870 年左右所提出的一階邏輯系統，繼承布林系統並向上延伸，形成一個數學基礎穩固且強大的邏輯系統，於是整個經典的邏輯系統建立完成。</p>
+<p>雖然如此，這些邏輯系統仍然是掌上的玩物，而且沒有人能確定這樣的邏輯系統，其能力到底有多強，是否一致且完備，是否有某些極限。希爾伯特在 1900 年所提出的 25 個數學問題中，這個問題被排在第二個提出。然而，希爾伯特並沒有能證明一階邏輯系統的完備性，而是在 1929 年由哥德爾證明完成了。</p>
+<p>哥德爾的成就不僅於此，1931 年他更進一步證明了一個非常令人驚訝的定理，在「一階邏輯的擴充系統 - 皮諾數論系統」當中，不具有完備性，而且它證明了假如該系統是完備的，將會導致矛盾。</p>
+<p>哥德爾在證明完備定理與不完備定理時，採用的都是矛盾証法，也就是透過排中律所證明的，這樣的証明並非建構性的，因此即使建立了完備定理，也沒有人能構造出一個建構式的証明方法，可以檢證一階邏輯的定理。</p>
+<p>1965 年，Robinson 提出了一條非常簡單的邏輯證明規則 -- Resolution，並且說明了如何利用矛盾檢證程序 Refutation，證明邏輯規則在某系統中的真假，這個方法既簡單又優美，因此廣為數學界與計算機科學界所稱道。以下，我們將更詳細的說明上述人物在邏輯學上的貢獻。</p>
+<h3 id="亞里斯多德-aristotle-出生於西元前-322-年"><a href="#亞里斯多德-aristotle-出生於西元前-322-年">亞里斯多德 (Aristotle) (出生於西元前 322 年)</a></h3>
+<p>亞里斯多德在其其理則學 (zoology) 研究中，提出了下列的三段式推論規則 Barbara，簡稱為三段論。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">類型</th>
+<th align="left">語句</th>
+<th align="left">說明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">大前提</td>
+<td align="left">所有人都終會死亡</td>
+<td align="left">普遍原理</td>
+</tr>
+<tr class="even">
+<td align="left">小前提</td>
+<td align="left">蘇格拉底是人</td>
+<td align="left">特殊陳述</td>
+</tr>
+<tr class="odd">
+<td align="left">結論</td>
+<td align="left">蘇格拉底終會死亡</td>
+<td align="left">推論結果</td>
+</tr>
+</tbody>
+</table>
+<h3 id="布爾-boole-出生於-1815年"><a href="#布爾-boole-出生於-1815年">布爾 (Boole) (出生於 1815年)</a></h3>
+<p>Boole 研究邏輯時，提出了一種只有真值與假值的邏輯，稱為二值邏輯，通常我們用 0 代表假值，1 代表真值。布爾研究這種邏輯系統，並寫出了一些代數規則，稱為布林代數，以下是其中的一些代數規則。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">規則 (數學寫法)</th>
+<th align="left">名稱</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="../timg/602ca9944b4f.jpg" /></td>
+<td align="left">OR 的結合律</td>
+</tr>
+<tr class="even">
+<td align="left"><img src="../timg/d82c48c778d0.jpg" /></td>
+<td align="left">OR 的交換律</td>
+</tr>
+<tr class="odd">
+<td align="left"><img src="../timg/fa3ac188a800.jpg" /></td>
+<td align="left">AND 的結合律</td>
+</tr>
+<tr class="even">
+<td align="left"><img src="../timg/f01700400c28.jpg" /></td>
+<td align="left">AND 的交換律</td>
+</tr>
+<tr class="odd">
+<td align="left"><img src="../timg/f5389bc891c5.jpg" /></td>
+<td align="left">狄摩根定律(1)</td>
+</tr>
+<tr class="even">
+<td align="left"><img src="../timg/806819bdab01.jpg" /></td>
+<td align="left">狄摩根定律(2)</td>
+</tr>
+</tbody>
+</table>
+<p>說明：上述規則中的 <img src="../timg/b6252c47c600.jpg" /> 代表邏輯或 (AND) (在程式語言裏常寫為 <code>&amp;</code> 或 and)， <img src="../timg/8668dd090624.jpg" /> 代表邏輯或 (OR) (在程式語言裏常寫為 <code>|</code> 或 or)。所以若改用程式領域的寫法，可改寫如下。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">規則 (數學寫法)</th>
+<th align="left">名稱</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>x | (y | z) = (x | y) | z</code></td>
+<td align="left">OR 的結合律</td>
+</tr>
+<tr class="even">
+<td align="left"><code>x | y = y | z</code></td>
+<td align="left">OR 的交換律</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>x &amp; (y &amp; z) = (x &amp; y) &amp; z</code></td>
+<td align="left">AND 的結合律</td>
+</tr>
+<tr class="even">
+<td align="left"><code>x &amp; y = y &amp; x</code></td>
+<td align="left">AND 的交換律</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>-(x|y) = -x &amp; -y</code></td>
+<td align="left">狄摩根定律(1)</td>
+</tr>
+<tr class="even">
+<td align="left"><code>-(x&amp;y) = -x | -y</code></td>
+<td align="left">狄摩根定律(2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="福雷格-frege-出生於-1848年"><a href="#福雷格-frege-出生於-1848年">福雷格 (Frege) (出生於 1848年)</a></h3>
+<p>Frege 在研究邏輯系統時，將函數的概念引入到邏輯系統當中，這種函數被稱為謂詞，因此該邏輯系統被稱為謂詞邏輯。然後，Frege 又引入了兩個量詞運算， <img src="../timg/8b141f94d437.jpg" /> (對於所有) 與 <img src="../timg/32ff223f4b92.jpg" /> (存在)，透過謂詞的限定作用，以及這兩個量詞，Frege 架構出了這種具有函數的邏輯系統，後來被稱為一階邏輯系統 (First Order Logic)。</p>
+<p>以下是我們將亞里斯多德的三段論，轉化為一階邏輯後，所寫出的一階邏輯規則。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">類型</th>
+<th align="left">語句</th>
+<th align="left">說明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">大前提</td>
+<td align="left"><img src="../timg/cfe6e9a974af.jpg" /></td>
+<td align="left">所有人都終會死亡</td>
+</tr>
+<tr class="even">
+<td align="left">小前提</td>
+<td align="left"><img src="../timg/f8c868b454f3.jpg" /></td>
+<td align="left">蘇格拉底是人</td>
+</tr>
+<tr class="odd">
+<td align="left">結論　</td>
+<td align="left"><img src="../timg/cae1b722691a.jpg" /></td>
+<td align="left">蘇格拉底終會死亡</td>
+</tr>
+</tbody>
+</table>
+<h3 id="希爾伯特-david-hilbert-出生於-1862年"><a href="#希爾伯特-david-hilbert-出生於-1862年">希爾伯特 (David Hilbert) (出生於 1862年)</a></h3>
+<p>事實上，在電腦被發明之前，數學界早已開始探索「公理系統」的能力極限。在西元 1900 年時，德國的偉大數學家希爾伯特 (Hilbert)，提出了著名的 23 個數學問題，其中的第二個問題如下所示。</p>
+<blockquote>
+<p>證明算術公理系統的無矛盾性 The compatibility of the arithmetical axioms.</p>
+</blockquote>
+<p>在上述問題中，希爾伯特的意思是要如何證明算術公理系統的 Compatibility，Compatibility 這個詞意謂著必須具有「一致性」 (Consistency) 與「完備性」(Completeness)。</p>
+<p>所謂的「一致性」，是指公理系統本身不會具有矛盾的現象。假如我們用 A 代表該公理系統，那麼 A 具有一致性就是 A 不可能導出兩個矛盾的結論，也就是 A =&gt; P 與 A=&gt; -P 不可能同時成立。</p>
+<p>所謂的「完備性」，是指所有「永遠為真的算式」(也就是定理) 都是可以被証明的，沒有任何一個定理可以逃出該公理系統的掌握範圍。</p>
+<p>然而，希爾伯特耗盡了整個後半生，卻也無法證明整數公理系統的一致性與完備性。或許是造化弄人，這個任務竟然被希爾伯特的一位優秀學生 - 哥德爾 (Godel) 所解決了，或者應該說是否決了。</p>
+<h3 id="哥德爾-kurt-gödel-出生於-1906-年"><a href="#哥德爾-kurt-gödel-出生於-1906-年">哥德爾 (Kurt Gödel) (出生於 1906 年)</a></h3>
+<p>哥德爾實際上證明了兩個定理，第一個是 1929 年提出的「哥德爾完備定理」(Gödel's Complete Theorem)，第二個是 1931 年證明的「哥德爾不完備定理」(Gödel's Incomplete Theorem)，這兩個定理看來似乎相當矛盾，但事實上不然，因為兩者所討論的是不同的公理系統，前者的焦點是「一階邏輯系統」(First Order Logic)，而後者的焦點則是「具備整數運算體系的一階邏輯系統」。</p>
+<p>哥德爾完備定理證明了下列數學陳述：</p>
+<blockquote>
+<p>一階邏輯系統是一致且完備的</p>
+</blockquote>
+<p>一致性代表一階邏輯系統不會具有矛盾的情況，而完備性則說明了一階邏輯當中的所有算式都可以被証明或否証。</p>
+<p>哥德爾不完備定理證明了下列數學陳述：</p>
+<blockquote>
+<p>任何一致且完備的「數學形式化系統」中，只要它強到足以蘊涵「皮亞諾算術公理」，就可以在其中構造在體系內「既不能證明也不能否證的命題」。</p>
+</blockquote>
+<p>哥德爾不完備定理改用另一個說法，如下所示：</p>
+<blockquote>
+<p>如果一個包含算術的公理系統可以用來描述它自身時，那麼它要麼是不完備的，要麼是不一致的，不可能兩者皆有！</p>
+</blockquote>
+<p>(筆者註：若該公理系統包含無限條公理時，必須是可列舉的 recursive enumerable)</p>
+<h3 id="羅賓遜-john-alan-robinson-出生於-1928-年"><a href="#羅賓遜-john-alan-robinson-出生於-1928-年">羅賓遜 (John Alan Robinson) (出生於 1928 年)</a></h3>
+<p>雖然哥德爾證明了一階邏輯是完備的，但是卻沒有給出一個建構式的方法，可以推理出所有的的一階邏輯定理。這個問題由 John Alan Robinson 在 1965 年解決了。</p>
+<p>Robinson 提出的 refutation 邏輯推論法是一種反證法，任何一階邏輯的算式 P 只要在系統 S 當中是真的，只要將 -P 加入該系統 S 中，就可以經由反證法導出矛盾。如果 P 在系統 S 當中不是真的，那麼將 P 加入 S 當中就無法導出矛盾。</p>
+<p>所謂的 refutation 反證法是依靠一個稱為 resolution 的邏輯規則，該規則如下所示：</p>
+<div class="figure">
+<img src="../timg/21fa3adc303f.jpg" />
+</div>
+<p>假如我們將上述算式中的 <img src="../timg/b4ffcfd79743.jpg" /> 寫為 A，將 <img src="../timg/9018c1f2e831.jpg" /> 寫為 B，則上述算式可以改寫如下：</p>
+<div class="figure">
+<img src="../timg/940130743f3d.jpg" />
+</div>
+<h3 id="結語"><a href="#結語">結語</a></h3>
+<p>邏輯學在西方文化中扮演了非常重要的角色，而且可以說是「現代科學」會出現在歐洲的重要原因，假如將「邏輯學」從西方文化中拿掉，或許工業革命就不會出現在歐洲了？</p>
+<p>您可以想像「孔子」整天追根究柢，常常和人辯論一件事情到底是真的還假，而且要轉換成符號，並且用邏輯的方式去證明嗎？</p>
+<p>但是「亞里斯多德」在那個年代就是這樣追根究柢的，所以他才會去研究解剖學，把動物給切開看看裡面有甚麼，我想這也是他提出三段論背後的原因吧！</p>
+<h3 id="參考文獻"><a href="#參考文獻">參考文獻</a></h3>
+<ul>
+<li><a href="http://zh.wikipedia.org/zh-tw/%E4%BA%9A%E9%87%8C%E5%A3%AB%E5%A4%9A%E5%BE%B7">維基百科：亞里斯多德</a></li>
+<li><a href="http://zh.wikipedia.org/zh-tw/%E4%B9%94%E6%B2%BB%C2%B7%E5%B8%83%E5%B0%94">維基百科：喬治·布爾</a></li>
+<li><a href="http://zh.wikipedia.org/zh-tw/%E4%B8%89%E6%AE%B5%E8%AB%96">維基百科：三段論</a></li>
+<li><a href="http://zh.wikipedia.org/zh-tw/%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E5%AE%9A%E7%90%86">維基百科：哥德爾不完備定理</a></li>
+<li><a href="http://zh.wikipedia.org/zh-tw/%E5%93%A5%E5%BE%B7%E5%B0%94%E5%AE%8C%E5%A4%87%E6%80%A7%E5%AE%9A%E7%90%86">維基百科：哥德爾完全性定理</a></li>
+<li><a href="http://zh.wikipedia.org/zh-tw/%E6%88%88%E7%89%B9%E6%B4%9B%E5%B8%83%C2%B7%E5%BC%97%E9%9B%B7%E6%A0%BC">維基百科：戈特洛布·弗雷格</a></li>
+<li><a href="http://zh.wikipedia.org/wiki/%E5%A4%A7%E5%8D%AB%C2%B7%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9">維基百科：大衛·希爾伯特</a></li>
+<li><a href="http://zh.wikipedia.org/zh-tw/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E7%9A%8423%E4%B8%AA%E9%97%AE%E9%A2%98">維基百科：希爾伯特的23個問題</a></li>
+<li><a href="http://zh.wikipedia.org/wiki/%E5%BA%93%E5%B0%94%E7%89%B9%C2%B7%E5%93%A5%E5%BE%B7%E5%B0%94">維基百科：庫爾特·哥德爾</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Zoology">Wikipedia:Zoology</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Aristotle">Wikipedia:Aristotle</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Boolean_logic">Wikipedia:Boolean Logic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/George_Boole">Wikipedia:George Boole</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Frege">Wikipedia:Frege</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hilbert_problem">Wikipedia:Hilbert's_problems</a></li>
+<li><a href="http://en.wikipedia.org/wiki/J._Alan_Robinson">Wikipedia:John Alan Robinson</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Resolution_logic">Wikipedia:Resolution (Logic)</a></li>
+<li><a href="http://aleph0.clarku.edu/~djoyce/hilbert/toc.html">Hilbert's Mathematical Problems</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Kurt_Gödel">Wikipedia:Kurt_Gödel</a></li>
+</ul>
+<p>【本文由陳鍾誠取材並修改自 <a href="http://zh.wikipedia.org/">維基百科</a>，採用創作共用的 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 授權】</p>
+<h2 id="布林邏輯與推論系統----何謂嚴格的數學證明"><a href="#布林邏輯與推論系統----何謂嚴格的數學證明">布林邏輯與推論系統 -- 何謂嚴格的數學證明？</a></h2>
+<h3 id="前言-1"><a href="#前言-1">前言</a></h3>
+<p>當我還是個學生時，我總是困惑著如何應付老師的考試，其中一個重要的數學困擾是，老師要我們「證明」某個運算式。</p>
+<p>最大的問題不在於我不會「證明」，因為在很多科目的證明題當中，我也都「答對了」，但是這種答對總是讓我感到極度的沒有把握，因為有時老師說「這樣的證明是對的」，但有時卻說「這樣的證明是錯的」。</p>
+<p>更神奇的是，老師的證明永遠都是對的，他們可以突然加入一個「推論」，而這個推論的根據好像之前沒有出現過，然後他們說：「由此可證」、「同理可證」....。</p>
+<p>直到有一天，我終於懂了。</p>
+<p>因為課堂上老師的證明往往不是「嚴格的證明」，因為嚴格的證明通常「非常的困難」，每個證明都可以是一篇論文，甚至在很多論文當中的證明也都不是嚴格的。</p>
+<p>所以在課堂上，老師總是可以天外飛來一筆的，跳過了某些「無聊的步驟」，奇蹟式的證明了某些定理，而這正是我所以感到困擾的原因。</p>
+<h3 id="一般的證明"><a href="#一般的證明">一般的證明</a></h3>
+<p>一般而言，日常生活中的證明，通常是不嚴格的。</p>
+<p>舉例來說，我可以「證明」某人殺了死者，因為殺死死者的兇刀上有「某人」的指紋。</p>
+<p>但是這樣的證明並不嚴格，因為有很少的可能性是「某人摸過兇刀、但是並沒有殺人」。</p>
+<p>所以我們總是可以看到那個「外表看似小孩，智慧卻過於常人」的「名偵探柯南」，總是天外飛來一筆的「證明」了某人是兇手，這種證明與數學證明可是完全不同的。</p>
+<h3 id="嚴格的證明"><a href="#嚴格的證明">嚴格的證明</a></h3>
+<p>數學的證明通常不能是「機率式」的，例如：「我證明他 99% 殺了人」，這樣的證明稱不上是嚴格的證明。</p>
+<p>嚴格的證明也並非結果一定要是 100% 的正確 (當然也不是說結果不正確)，真正的證明是一種過程，而不是結果。</p>
+<p>怎麼說呢？</p>
+<p>數學其實很像程式領域的演算法，或者就像是電腦的運作過程，當我們設計出一顆 CPU 之後，你必須用該 CPU 的指令撰寫出某些函數，以便完成某個程式。</p>
+<p>那麼，數學的 CPU 是甚麼呢？</p>
+<p>答案是「公理系統」 (Axioms)！</p>
+<p>只有透過公理系統，經由某種演算方式，計算出待證明定理在任何情況下都是真的，這樣才算是證明了該定理。</p>
+<p>這些公理系統其實就是數學的 CPU 指令集。</p>
+<p>布林代數大概是數學當中最簡單的系統了，因為布林代數的値只有兩種--「真與假」 (或者用 0 與 1 代表)。</p>
+<p>為了說明嚴格的數學證明是如何進行的，我們將從布林代數的公理系統 (CPU?) 開始，說明如何證明布林代數的某些定理，就好像是如何用指令集撰寫程式一樣。</p>
+<h3 id="布林邏輯"><a href="#布林邏輯">布林邏輯</a></h3>
+<p>對於單一變數 x 的布林系統而言，x 只有兩個可能的值 (0 或 1)。</p>
+<p>對於兩個變數 x, y 的布林系統而言，(x, y) 的組合則可能有 (0,0), (0,1), (1,0), (1,1) 四種。</p>
+<p>對於三個變數 x, y, z 的布林系統而言，(x, y, z) 的組合則可能有 (0,0, 0), (0,0,1), (0,1,0), (0,1,1), (1,0, 0), (1,0,1), (1,1,0), (1,1,1) 八種。</p>
+<p>基本的布林邏輯運算有三種，AND (且), OR (或), NOT (反)，在布林代數當中，通常我們在符號上面加一個上標橫線代表 NOT，用 <img src="../timg/b6252c47c600.jpg" /> 代表 AND，用 <img src="../timg/8668dd090624.jpg" /> 代表 OR。</p>
+<p>但是在程式裏面，受到 C 語言的影響，很多語言用驚嘆號 <code>!</code> 代表 NOT，用 <code>&amp;</code> 代表 AND，用 <code>|</code> 代表 OR。以下我們將採用類似 C 語言的程式型寫法進行說明。</p>
+<table width="500px">
+<tr><td>
+NOT
+</td><td>
+AND
+</td><td>
+OR
+</td></tr>
+<tr><td>
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">x</th>
+<th align="left">!x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+</tbody>
+</table>
+</td><td>
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">x</th>
+<th align="left">y</th>
+<th align="left">x&amp;y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+</td><td>
+
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">x</th>
+<th align="left">y</th>
+<th align="left">x<code>|</code>y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr></table>
+
+<p>假如我們想知到某個邏輯式的真值表，例如 (-x | y) 的真值表，只要透過列舉的程序就可以檢查完畢。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">x</th>
+<th align="left">y</th>
+<th align="left">-x</th>
+<th align="left">-x<code>|</code>y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>接著，我們就可以定義一些公理系統，這些「公理系統」就像是數學推理的指令集，讓我們可以推論出哪些邏輯式在這個公理系統下是真的 (定理)，哪些邏輯式這個公理系統下不一定是真的。</p>
+<h3 id="公理系統-1"><a href="#公理系統-1">公理系統 1</a></h3>
+<p>舉例而言，假如我們制定了一個公理系統如下所示。</p>
+<pre><code>公理 1: -p | q
+公理 2: p</code></pre>
+<p>那麼，我們就可以列出這個布林系統的真值表。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">p</th>
+<th align="left">q</th>
+<th align="left"><code>-p|q</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>在上述真值表中，凡是無法滿足公理系統的列，就代表該項目違反公理系統，因此在此公理系統下不是真的，可以被刪除 (不是該公理系統的一個「解答」)。</p>
+<p>註：在邏輯的術語中，滿足該公理系統的解答，稱為一個 Model (模型)。</p>
+<p>在上述表格中，前兩條的 x 為 0，因此不滿足公理 2，而第三條的 <code>-p|q</code> 為 0，不滿足公理 1，因此符合該公理系統的項目就只剩下了一個了。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">p</th>
+<th align="left">q</th>
+<th align="left"><code>-p|q</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>在這個滿足公理系統的真值表當中，我們可以看到 <code>q</code> 只能是 1，也就是 <code>q</code> 其實是個定理。</p>
+<p>說明：在上述邏輯推論系統當中， <code>-p|q</code> 可以簡寫為 <code>p → q</code>，因此上述公理系統可以改寫如下，這樣的推論法則稱為 Modus Ponus (中文翻成「肯定前件」)。</p>
+<pre><code>公理 1: p → q
+公理 2: p
+------------------
+結論： q</code></pre>
+<h3 id="公理系統-2"><a href="#公理系統-2">公理系統 2</a></h3>
+<p>假如我們定義了以下的公理系統：</p>
+<pre><code>公理 1: -p | q
+公理 2:  p | r</code></pre>
+<p>那麼我們可以列出真值表如下：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">p</th>
+<th align="left">q</th>
+<th align="left">r</th>
+<th align="left"><code>-p|q</code></th>
+<th align="left"><code>p|r</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>當我們將不符合公理系統的項目拿掉之後，以上的真值表就只剩以下這些項目。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">p</th>
+<th align="left">q</th>
+<th align="left">r</th>
+<th align="left"><code>-p|q</code></th>
+<th align="left"><code>p|r</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>此時，如果我們檢查這些項目中 <code>q|r</code> 的真值表，會發現 <code>q|r</code> 為真者其結果全部為 1 ，因此 <code>q|r</code> 在這個公理系統下是真理。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">p</th>
+<th align="left">q</th>
+<th align="left">r</th>
+<th align="left"><code>-p|q</code></th>
+<th align="left"><code>p|r</code></th>
+<th align="left"><code>q|r</code></th>
+<th align="left"><code>p|q</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>但是如果我們檢查這些項目中 p|q 的真值表，會發現有一項為 0 ，因此 <code>p|q</code> 在這個公理系統下並非真理。</p>
+<p>所以 <code>q|r</code> 在此公理系統下是一個定理，但 <code>p|q</code> 則不是定理。</p>
+<p>說明：在上述邏輯推論系統當中， <code>-p|q</code> 可以簡寫為 <code>p → q</code>，而 <code>p|r</code> 則可以想成 <code>-(-p)|r</code> ，於是寫成 <code>-p → r</code>。</p>
+<p>於是您可以觀察到當 <code>p=1</code> 時 <code>q=1</code>，當 <code>p=0</code> 時 <code>r=1</code>，而 <code>p</code> 只有可能是 1 或 0，於是 <code>q</code> 與 <code>r</code> 兩者至少有一個成立，這也就是推論出的定理 <code>q|r</code> 成立的原因了。</p>
+<h3 id="推論法則"><a href="#推論法則">推論法則</a></h3>
+<p>現在，我們已經具備了足夠的基本知識，可以用來說明何謂嚴格的數學證明了。</p>
+<p>假如我們將公理系統 2 中推論出 <code>q|r</code> 的程序，變成一條明文的規則，如下所示：</p>
+<pre><code>(-p | q) &amp; (p | r) → (q|r)</code></pre>
+<p>那麼，我們就可以用這樣的規則進行推論，這個推理方式乃是 Robinson 所提出的，稱為 Resolution 法則。</p>
+<p>於是我們可以根據這條規則，推論出某個邏輯公理系統下的定理。</p>
+<p>必須注意的是，在以上的描述中，我們並沒有區分變項與常項。讓我們在此先說明一下。</p>
+<p>在一般的邏輯系統中，通常我們用小寫代表變項，大寫代表常項。其中的變項可以設定成任意的項目，而常項則只能代表自己。</p>
+<p>舉例而言，A, B, C, DOG, SNOOPY 等代表常項，而 x, y, z, w, .... 等則代表變項。</p>
+<p>公理系統理可以包含變項與常項，舉例而言，假如有個公理系統如下所示。</p>
+<pre><code>A | -B
+-A | C
+-(-B | C) | D</code></pre>
+<p>而這整個邏輯系統的推論法則只有一條，那就是 Resolution 法則，也就是 <code>(-p | q) &amp; (p | r) → (q|r)</code> 。</p>
+<p>我們可以透過推論法則對公理系統中的公理進行綁定 (例如 p 設定為 A，q 設定為 -B ....) 與推論，得到下列結果：</p>
+<pre><code>(A | -B) &amp; (-A | C) → (-B|C)  ; 令 p=A, q=-B, r=C ，於是可以推出 (-B|C)。
+(-B|C) &amp; (-(-B | C) | D) → D  ; 令 p=(-B|C), q=D, r=空集合，於是可以推出 D。</code></pre>
+<p>透過這樣的推論、我們就得到了以下的「事實庫」。</p>
+<pre><code>A | -B
+-A | C
+-(-B | C) | D
+(-B | C)
+D</code></pre>
+<p>如此我們就可以不需要依靠真值表，直接從公理系統開始，透過嚴格的計算程序，推論出該公理系統中的定理了。</p>
+<p>這種證明方式，就是一種為嚴格的數學證明。</p>
+<p>這種證明所遵循的，乃是一種 『公理 / 推論 / 定理1 / 推論 / 定理2 / ...』 的方式，這種方式讓證明變成了一種計算過程，是可以寫成電腦程式的，這種證明方式乃是一種嚴格可計算的證明方式。</p>
+<h3 id="後記"><a href="#後記">後記</a></h3>
+<p>大部分的數學系統，都希望能達到這樣嚴格的程度，但可惜的是，並非所有數學系統都能完全達到這樣嚴格的程度。舉例而言：歐氏幾何可以說是公理化的早期經典之作，但其中仰賴圖形直覺的證明過程仍然有很多，並非完全達到公理化。而微積分等數學的嚴格公理化也一直是數學家還在研究的問題。</p>
+<p>但對公理化數學體系最精彩的一段歷史是，希爾伯特對公理化的問題與歌德爾不完備定理對數學可完全公理化的反證，以下是這段歷史的簡要說明。</p>
+<p>20 世紀的大數學家 Hilbert 曾經於 1900 年提出的 23 個數學問題中提到一個問題，就是「是否能為數學系統建立證明法則，讓數學證明可以完全被計算出來」，後來歌德爾 (Godel) 在 1926 年證明了一階邏輯的完備定理，讓大家看到了一線曙光，但歌德爾在 1929 年又提出了一個數論系統的不完備定理，證明了有些定理無法透過計算程序證明。</p>
+<p>歌德爾的研究，後來在電腦領域，被圖靈 (Turing) 重新詮釋了一遍，圖靈證明了「停止問題」是電腦無法 100% 正確判定的問題，這也開啟了後來計算理論的研究之河。圖靈也因此而成為計算理論領域的第一人，所以 ACM 這個組織才會將電腦界的最重要獎項稱為「圖靈獎」(Turing Award)。</p>
+<h3 id="參考文獻-1"><a href="#參考文獻-1">參考文獻</a></h3>
+<ul>
+<li>維基百科：<a href="http://zh.wikipedia.org/wiki/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91">命題邏輯</a></li>
+<li>相關討論：為甚麼國中的數學證明是從「歐式幾何」開始教，而不從「布林代數」開始教呢？
+<ul>
+<li><a href="https://www.facebook.com/ccckmit/posts/10151056707046893">https://www.facebook.com/ccckmit/posts/10151056707046893</a></li>
+</ul></li>
+<li>數學中的公理化方法 (上) 吳開朗
+<ul>
+<li><a href="http://w3.math.sinica.edu.tw/math_media/d171/17111.pdf">http://w3.math.sinica.edu.tw/math_media/d171/17111.pdf</a></li>
+</ul></li>
+<li>數學中的公理化方法 (下) 吳開朗
+<ul>
+<li><a href="http://w3.math.sinica.edu.tw/math_media/d172/17203.pdf">http://w3.math.sinica.edu.tw/math_media/d172/17203.pdf</a></li>
+</ul></li>
+</ul>
+<p>【本文由陳鍾誠取材並修改自 <a href="http://zh.wikipedia.org/">維基百科</a>，採用創作共用的 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 授權】</p>
+<h2 id="謂詞邏輯一階邏輯與哥德爾完備定理"><a href="#謂詞邏輯一階邏輯與哥德爾完備定理">謂詞邏輯、一階邏輯與「哥德爾完備定理」</a></h2>
+<h3 id="前言-2"><a href="#前言-2">前言</a></h3>
+<p>在 <a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201403/htm/focus2.html">布林邏輯與推論系統 -- 何謂嚴格的數學證明？</a> 這篇文章中，我們介紹了「布林邏輯」(Boolean Logic) 這種簡單的推論系統，這種邏輯系統又稱為「命題邏輯」(Propositional Logic)。</p>
+<p>在本文中，我們將介紹一個能力較強大的邏輯系統，稱為「一階邏輯」(First Order Logic) 系統，這是一種「謂詞邏輯」(Predicate Logic) 的實例，然後再說明這種邏輯系統中的一個重要定理，稱為「哥德爾完備定理」。</p>
+<h3 id="謂詞邏輯"><a href="#謂詞邏輯">謂詞邏輯</a></h3>
+<p>在布林邏輯中，只有用來代表真假值的簡單變數，像是 A, B, C, X, Y, Z .... 等，所以邏輯算式看來通常如下：</p>
+<ul>
+<li>P &amp; (P=&gt;Q) =&gt; Q.</li>
+<li>A &amp; B &amp; C =&gt; D | E.</li>
+<li>-(A &amp; B) &lt;=&gt; -A | -B.</li>
+</ul>
+<p>這種命題邏輯裏沒有函數的概念，只有簡單的命題 (Proposition)，因此才稱為命題邏輯。</p>
+<p>而在謂詞邏輯裏，則有「布林函數」的概念，因此其表達能力較強，例如以下是一些謂詞邏輯的範例。</p>
+<ul>
+<li>Parent(x,y) &lt;= Father(x,y).</li>
+<li>Parent(John, Johnson).</li>
+<li>Ancestor(x,y) &lt;= Parent(x,y).</li>
+<li>Ancestor(x,y) &lt;= Ancestor(x,z) &amp; Parent(z,y).</li>
+</ul>
+<p>您可以看到在這種邏輯系統裏，有「布林變數」的概念 (像是 x, y, z 等等)，也有函數的概念，像是 Parent(), Father(), Ancestor() 等等。</p>
+<h3 id="一階邏輯"><a href="#一階邏輯">一階邏輯</a></h3>
+<p>在上述這種謂詞邏輯系統中，如果我們加上 <img src="../timg/8b141f94d437.jpg" /> (對於所有) 或 <img src="../timg/297f1fa5c654.jpg" /> (存在) 這兩個變數限定符號，而其中的謂詞不可以是變項，而必須要是常項，這種邏輯就稱為一階邏輯。</p>
+<ul>
+<li><img src="../timg/514fcee4eee7.jpg" /> ; 人都是會死的。</li>
+<li><img src="../timg/622fa223aee6.jpg" /> ; 蘇格拉底是人。</li>
+<li><img src="../timg/66f17dc26b90.jpg" /> ; 蘇格拉底會死。</li>
+</ul>
+<p>當然、規則可以更複雜，像是以下這個範例，就說明了「存在一些人可以永遠被欺騙」。</p>
+<ul>
+<li><img src="../timg/d37038cf1d92.jpg" title="fig:" /></li>
+</ul>
+<h3 id="二階邏輯"><a href="#二階邏輯">二階邏輯</a></h3>
+<p>如果一階邏輯中的謂詞，放寬成可以是變項的話 (這些變項可以加上 <img src="../timg/8b141f94d437.jpg" /> 與 <img src="../timg/32ff223f4b92.jpg" /> 等符號的約束)，那就變成了二階邏輯，以下是一些二階邏輯的規則範例。</p>
+<ul>
+<li><img src="../timg/d12b91ab3a7b.jpg" /><br /></li>
+<li><img src="../timg/41d3eb0c5f8c.jpg" /></li>
+<li><img src="../timg/d01e95cc8ac8.jpg" /> ; 數學歸納法。</li>
+</ul>
+<h3 id="一致性與完備性"><a href="#一致性與完備性">一致性與完備性</a></h3>
+<p>在邏輯系統中，所謂的「一致性」，是指公理系統本身不會具有矛盾的現象。假如我們用 A 代表該公理系統，那麼 A 具有一致性就是 A 不可能導出兩個矛盾的結論，也就是 A =&gt; P 與 A=&gt; -P 不可能同時成立。</p>
+<h3 id="哥德爾完備性定理"><a href="#哥德爾完備性定理">哥德爾完備性定理</a></h3>
+<p>哥德爾於 1929 年證明了「哥德爾完備定理」(Gödel's Complete Theorem)，這個定理較簡化的陳述形式如下：</p>
+<ul>
+<li>一階邏輯系統是一致且完備的，也就是所有的一階邏輯定理都可以透過機械性的推論程序證明出來，而且不會導出矛盾的結論。</li>
+</ul>
+<p>以下是哥德爾完備定理的兩種陳述形式，詳細的證明方法請參考 <a href="http://en.wikipedia.org/wiki/Original_proof_of_G%C3%B6del&#39;s_completeness_theorem">Wikipedia:Original proof of Gödel's completeness theorem</a>。</p>
+<ul>
+<li><p>Theorem 1. Every formula valid in all structures is provable.</p></li>
+<li><p>Theorem 2. Every formula φ is either refutable or satisfiable in some structure</p></li>
+</ul>
+<h3 id="結語-1"><a href="#結語-1">結語</a></h3>
+<p>「哥德爾完備性定理」似乎得到了一個很正向的結果，讓人對邏輯系統的能力擁有了一定的信心。</p>
+<p>但是、當哥德爾進一步擴展這個邏輯系統，加入了「自然數的加法與乘法」等運算之後，卻發現了一個令人沮喪的結果，那就是「包含自然數加法與乘法的一階邏輯系統，如果不是不一致的，那就肯定是不完備的，不可能兩者都成立」。</p>
+<p>這將引出我們的下一篇文章， <a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201403/htm/focus4.html">從程式人的角度證明「哥德爾不完備定理」</a>。</p>
+<h3 id="參考文獻-2"><a href="#參考文獻-2">參考文獻</a></h3>
+<ul>
+<li><a href="http://zh.wikipedia.org/wiki/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91">維基百科：謂詞邏輯</a></li>
+<li><a href="http://zh.wikipedia.org/wiki/%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91">維基百科：一階邏輯</a></li>
+<li><a href="http://zh.wikipedia.org/wiki/%E4%BA%8C%E9%9A%8E%E9%82%8F%E8%BC%AF">維基百科：二階邏輯</a></li>
+<li><a href="http://en.wikipedia.org/wiki/First-order_logic">Wikipedia:First-order logic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Second-order_logic">Wikipedia:Second-order_logic</a></li>
+<li><a href="http://zh.wikipedia.org/wiki/%E5%93%A5%E5%BE%B7%E5%B0%94%E5%AE%8C%E5%A4%87%E6%80%A7%E5%AE%9A%E7%90%86">維基百科：哥德爾完備性定理</a></li>
+<li><a href="http://www.encyclopediaofmath.org/index.php/Henkin_construction">http://www.encyclopediaofmath.org/index.php/Henkin_construction</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Original_proof_of_G%C3%B6del&#39;s_completeness_theorem">Wikipedia:Original proof of Gödel's completeness theorem</a></li>
+</ul>
+<p>【本文由陳鍾誠取材並修改自 <a href="http://zh.wikipedia.org/">維基百科</a>，採用創作共用的 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 授權】</p>
+<h2 id="從程式人的角度證明哥德爾不完備定理"><a href="#從程式人的角度證明哥德爾不完備定理">從程式人的角度證明「哥德爾不完備定理」</a></h2>
+<p>1900 年，德國的偉大數學家希爾伯特 (Hilbert)，提出了著名的 23 個數學問題，其中的第二個問題如下所示。</p>
+<blockquote>
+<p>證明算術公理系統的無矛盾性 The compatibility of the arithmetical axioms.</p>
+</blockquote>
+<p>在上述問題中，希爾伯特的意思是要如何證明算術公理系統的 Compatibility，Compatibility 這個詞意謂著必須具有「一致性」 (Consistency) 與「完備性」(Completeness)。</p>
+<p>為此、許多數學家花費了一輩子的心力，企圖建構出一個「既一致又完備」的邏輯推論系統，像是「羅素與懷德海」就寫了一本「數學原理」，希望為數學建構出非常扎實的「公理系統」。</p>
+<p>結果、這樣的企圖心被哥德爾的一個定理給毀了，那個定理就是「哥德爾不完備定理」。</p>
+<p>要瞭解「哥德爾不完備定理」之前，最好先瞭解一下「邏輯悖論」這個概念。</p>
+<p>當初、羅素在努力的建構數學原理時，卻發現了數學中存在著邏輯悖論，於是發出感嘆：「當我所建構的科學大廈即將完工之時，卻發現它的地基已經動搖了...」。</p>
+<p>羅素的話，其原文是德文，據說翻譯成英文之後意義如下：</p>
+<blockquote>
+<p>Hardly anything more unwelcome can befall a scientific writer than that one of the foundations of his edifice be shaken after the work is finished</p>
+</blockquote>
+<p>結果，在 1950年，羅素穫得諾貝爾文學獎 (天啊！羅素不是數學家嗎！但是看他上面那句話的文筆，我很能體會他得諾貝爾文學獎的原因了 ...)</p>
+<h3 id="理髮師悖論"><a href="#理髮師悖論">理髮師悖論</a></h3>
+<p>理髮師悖論可以描述如下：</p>
+<blockquote>
+<p>在某一個小世界裏，有一個理髮師，他宣稱要為該世界中所有不自己理頭髮的人理髮，但是不為任何一個自己理頭髮的人理髮！</p>
+<p>請問、他做得到嗎？</p>
+</blockquote>
+<p>您覺得呢？</p>
+<p>這個問題的答案是，他絕對做不到，原因出在他自己身上：</p>
+<blockquote>
+<p>如果他「為」自己理頭髮，那麼他就為「一個自己理頭髮的人理髮」，違反了後面的宣言。</p>
+<p>如果他「不為」自己理頭髮，那麼他就沒有為「該世界中 &quot;所有&quot; 不自己理頭髮的人理髮」，因此違反了前面的宣言。</p>
+</blockquote>
+<p>於是、他理也不是、不理也不是，這就像中國傳說故事裏「矛與盾」的故事一樣，他的問題陷入兩難，產生「矛盾」了。</p>
+<p>所以、該理髮師想做的事情是不可能做得到的！</p>
+<p>這樣的悖論，在邏輯與電腦的理論裏有很深遠的影響，哥德爾正是因為找到了邏輯體系的悖論而發展出「哥德爾不完備定理」，而電腦之父圖靈也事發現了「停止問題」會造成悖論而證明了有些事情電腦做不到 ....</p>
+<h3 id="哥德爾不完備定理的描述"><a href="#哥德爾不完備定理的描述">哥德爾不完備定理的描述</a></h3>
+<p>當初「哥德爾」提出的「不完備定理」，大致有下列兩種描述方法，後來簡稱為「哥德爾第一不完備定理」與「哥德爾第二不完備定理」，如下所示。</p>
+<p>哥德爾第一不完備定理</p>
+<blockquote>
+<p>定理 G1：若公理化邏輯系統 T 是個包含基本算術 (皮諾公設)的一致性系統，那麼 T 中存在一種語句 S，但是你無法用 T 證明 S ，卻也無法否證 S。</p>
+</blockquote>
+<p>哥德爾第二不完備定理</p>
+<blockquote>
+<p>定理 G2：若公理化邏輯系統 T 是個包含基本算術 (皮諾公設)的一致性系統，那麼 T 無法證明自己的一致性。</p>
+</blockquote>
+<p>但是、對於「程式人」而言，上述描述都太邏輯了，讓我們改用「程式人」的角度來看這個問題，提出另一種「程式型版本」的說法：</p>
+<p>哥德爾不完備定理的程式型：</p>
+<blockquote>
+<p>定理 G3：不存在一個程式，可以正確判斷一個「包含算術的一階邏輯字串」是否為定理。</p>
+</blockquote>
+<h3 id="哥德爾不完備定理的程式型證明"><a href="#哥德爾不完備定理的程式型證明">哥德爾不完備定理的程式型證明</a></h3>
+<p>接著、就讓我們來「證明」一下上述的程式型「哥德爾不完備定理」吧！</p>
+<p>由於牽涉到矛盾，所以我們將採用反證法：</p>
+<p>證明：</p>
+<p>假如這樣一個程式存在，那麼代表我們可以寫出一個具有下列功能的函數。</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="fu">Proveable</span>(str)
+  <span class="kw">if</span> (str is a theorem) 
+    <span class="kw">return</span> <span class="dv">1</span>;           
+  <span class="kw">else</span>                  
+    <span class="kw">return</span> <span class="dv">0</span>;           
+end</code></pre>
+<p>這樣的函數本身，並不會造成甚麼問題，「包含算術的一階邏輯」(簡稱為 AFOL) 夠強，強到可以用邏輯式描述 Provable(str) 這件事，因此我們可以寫出 <code>Provable(s)</code> 這樣一個邏輯陳述。</p>
+<p>更厲害的是，我們也可以將一個字串在 AFOL 裏，是否為定理這件事情，寫成邏輯陳述 (註：邏輯符號 ∃ 代表存在，- 代表 not， &amp; 代表 and， | 代表 or)。</p>
+<p>接著、我們就可以問一個奇怪的問題了！那個問題描述如下。</p>
+<blockquote>
+<p>請問 isTheorem(∃s -Provable(s) &amp; -Provable(-s)) 是否為真呢？</p>
+</blockquote>
+<p>讓我們先用 T 代表 ∃s -Provable(s) &amp; -Provable(-s) 這個邏輯式的字串，然後分別討論「真假」這兩個情況：</p>
+<ol style="list-style-type: decimal">
+<li><p>如果 isTheorem(T) 為真，那麼代表存在無法證明的定理，也就是 Provable 函數沒辦法證明所有的定理。</p></li>
+<li><p>如果 isTheorem(T) 為假，那麼代表 -T 應該為真。這樣的話，請問 Provable(-T) 會傳回甚麼呢？讓我們分析看看：</p></li>
+</ol>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="fu">Proveable</span>(-T)
+  <span class="kw">if</span> (-T is a theorem) <span class="co">// 2.1 這代表 -(∃s -Provable(s) &amp; -Provable(-s)) 是個定理，也就是 Provable() 可以正確證明所有定理。</span>
+    <span class="kw">return</span> <span class="dv">1</span>;          <span class="co">//     但這樣的話，就違反了上述 「2. 如果 isTheorem(T) 為假」的條件了。</span>
+  <span class="kw">else</span>                 <span class="co">// 2.2 否則代表 -T 不是個定理，也就是存在 (∃) 某些定理 s 是無法證明的。</span>
+    <span class="kw">return</span> <span class="dv">0</span>;          <span class="co">//     但這樣的話，又違反上述「2. 如果 isTheorem(T) 為假」的條件了。</span>
+end</code></pre>
+<p>於是我們斷定：如果 Provable() 對所有輸入都判斷正確的話，那麼 2 便是不可能的，因為 (2.1, 2.2) 這兩條路都違反 2 的假設，也就是只有 1 是可能的，所以我們可以斷定 Provable(s) 沒辦法正確證明所有定理。</p>
+<h3 id="結語-2"><a href="#結語-2">結語</a></h3>
+<p>在本文中，我們沒有寫出 Provable(s) 的邏輯陳述，也沒有寫出 isTheorem() 的邏輯陳述，因為這需要對「程式的指令集」，也就是 CPU 做一個邏輯描述，這樣說來故事就太長了！</p>
+<p>而這個 CPU，通常後來的「計算理論」書籍裏會用「圖靈機」來描述，但這並不是哥德爾當初的證明，因為「哥德爾證明不完備定理」的年代，圖靈還沒有提出「圖靈機」的概念。</p>
+<p>事實上、當初「哥德爾」的證明，根本也沒有「程式與電腦的概念」，所以「哥德爾」花了很多力氣建構了一個「哥德爾化的字串編碼概念」，這種字串編碼是建構在包含「+, *」兩個運算的算術系統上，也就是「皮亞諾公設」所描述的那種系統。這也是為何要引進「算術」到一階邏輯中，才能證明「哥德爾不完備定理」的原因了。</p>
+<p>1931 年「哥德爾」證明出「不完備定理」之後，後來「圖靈」於 1936 年又提出了一個電腦絕對無法完全做到的「停止問題」(Halting Problem)，該問題乃是希望設計出一個函數 isHalting(code, data) ，可以判斷程式 code 在輸入 data 之後會不會停，也就是 code(data) 會不會停。圖靈利用圖靈機的架構，證明了該問題同樣是不可判定的，也就是沒有任何一個程式可以完全正確的判定這樣的問題。</p>
+<p>「圖靈」的手法，與「哥德爾」非常類似，但是卻又更加簡單清楚。(不過既使如此，我還是很難直接理解圖靈的證明，因為本人在碩博士時連續被「圖靈機」荼毒了兩次，再也不希望跟「圖靈機」有任何瓜葛了 ....)</p>
+<p>但是、我們仍然希望能夠讓「對程式有興趣」的朋友們，能夠清楚的理解「圖靈」與「哥德爾」在「計算理論」上的成就與貢獻，以免過於自大的想寫出一個「可以解決所有問題的程式」，我想只有站在前人的肩膀上，才能看清楚「程式」到底是個甚麼東西吧！</p>
+<p>(當然、其實想要「寫出一個可以解決所有問題的程式」是非常好的想法。雖然「圖靈」與「哥德爾」已經都告訴過我們這是不可能的，但是身為一個程式人，就應該有挑戰不可能任務的決心，不是嗎？ ........ 雖然、不一定要去做這種不可能的問題啦 ....)</p>
+<h3 id="參考文獻-3"><a href="#參考文獻-3">參考文獻</a></h3>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Russells_paradox">Wikipedia:Russell's paradox</a></li>
+<li><a href="http://zh.wikipedia.org/wiki/%E7%BD%97%E7%B4%A0%E6%82%96%E8%AE%BA">維基百科:羅素悖論</a></li>
+<li><a href="http://www.apronus.com/math/goedel.htm">An Outline of the Proof of Gödel's Incompleteness Theorem</a>, All essential ideas - without the final technical details.</li>
+<li><a href="http://www.math.hawaii.edu/~dale/godel/godel.html">Godel's Incompleteness Theorem</a>, By Dale Myers</li>
+<li><a href="http://blog.sina.com.cn/s/blog_71329a960100sauh.html">哥德尔轶事</a></li>
+<li><a href="http://sammelpunkt.philo.at:8080/1126/1/Bagaria.pdf">A Short Guide to Godel's Second Incomplete Theorem (PDF)</a>, Joan Bagaria.</li>
+<li><a href="http://en.wikipedia.org/wiki/Proof_sketch_for_G%C3%B6del%27s_first_incompleteness_theorem">Wikipedia:Proof sketch for Gödel's first incompleteness theorem</a></li>
+</ul>
+<p>【本文由陳鍾誠取材並修改自 <a href="http://zh.wikipedia.org/">維基百科</a>，採用創作共用的 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 授權】</p>
+<h1 id="人物速寫"><a href="#人物速寫">人物速寫</a></h1>
+<h2 id="橫跨數學哲學文學的諾貝爾大師伯特蘭羅素-bertrand-arthur-william-russell"><a href="#橫跨數學哲學文學的諾貝爾大師伯特蘭羅素-bertrand-arthur-william-russell">橫跨「數學、哲學、文學」的諾貝爾大師：伯特蘭·羅素 (Bertrand Arthur William Russell)</a></h2>
+<p>羅素出生於1872年的一個貴族家庭，當時大英帝國正值巔峰，逝於1970年，此時英國經歷過兩次世界大戰，其帝國已經沒落。</p>
+<p>羅素的家族相當顯赫，祖父約翰·羅素勛爵在1840年代曾兩次出任英國首相，是「輝格黨」的核心成員。羅素的父母分別在他兩歲與四歲時過世，因此羅素是擔任兩次首相的祖父所扶養長大的。</p>
+<div class="figure">
+<img src="../img/Bertrand_Russell.jpg" alt="圖、伯特蘭·羅素 (Bertrand Arthur William Russell)" /><p class="caption">圖、伯特蘭·羅素 (Bertrand Arthur William Russell)</p>
+</div>
+<p>在婚姻生活方面，羅素於 17 歲時便與美國籍的 Alys Pearsall Smith 墜入情網，22 歲時兩人結婚，但由於羅素有婚外情的關係，所以在 39 歲時離婚了。49 歲時又娶了 Dora Black 並育有兩個孩子，55 歲時夫妻兩人一起創立了「皮肯·希爾教育實驗學校」（Beacon Hill School），後來羅素因反戰活動而被劍橋大學開除。接著羅素又有了婚外情，於是與 Dora Black 又離婚了。64 歲時羅素與牛津大學學生 Patricia Spence 結婚。72 歲時羅素回到英國，並重新執教於劍橋大學三一學院。80 歲時羅素再度離婚，並與一名美國的英語教授結婚。88 歲時羅素出版了自傳，並曾參與了甘迺迪遇刺事件的調查。後來羅素活到了 98 歲高齡，於1970年去世。</p>
+<p>在學術方面，羅素 18 歲時進入劍橋大學三一學院學習哲學、邏輯學和數學。他起初對數學感興趣，並認為數學是邏輯學的一部分，於是試圖用邏輯建構整個數學體系，1901 年他發現了「理髮師悖論」，並於 1910 年與老師懷海德一起發表了《數學原理》這部巨著。</p>
+<p>所謂的「羅素理髮師悖論」，是有「一位理髮師，宣稱要為所有不自己理頭髮的人理髮，但是不為任何自己理頭髮的人理髮」。這句話是有問題的，因為該理髮師會在要不要為自己理頭髮這件事情上產生矛盾。</p>
+<p>羅素發現的悖論，也讓他開始思考邏輯學的問題，後來他與「摩爾、弗雷格、維根斯坦和懷特海」等人創立了「邏輯分析哲學」，企圖將哲學問題轉化為邏輯符號，讓哲學家們就能夠更容易地推導出結果，而不會被不夠嚴謹的語言所誤導。</p>
+<p>他們企圖建構出能夠解釋世界本質的理想邏輯語言。但是「哥德爾」所證明的「不完備定理」卻毀了這個想法，</p>
+<p>1920年羅素訪問俄國和中國，並在北京與杜威同時期進行一年的講學，在長沙時期，青年毛澤東曾經擔任記錄員。他回到歐洲後解了一本《中國問題》，孫中山並稱羅素為「唯一真正理解中國的西方人」。</p>
+<p>徐志摩年輕時曾經到英國劍橋想拜羅素為師，但那時羅素已經離開劍橋大學，否則徐志摩很可能會成為羅素的學生。</p>
+<p>羅素的著作很多，列舉如下：</p>
+<pre><code>《幾何學基礎》（1897年）
+《數學原理》（懷特海合著，1910, 1912, 1913年）
+《哲學論文集》（1910年）
+《哲學問題》（1912年）
+《社會重建原則》（1916年）
+《自由之路》（1918年）
+《中國問題》（1922年）
+《工業文明的前景》（合著，1923年）
+《科學的未來》（1924年）
+《相對論入門》（1925年）
+《論兒童教育》（1926）
+《物之分析》（The Analysis of Matter，1927年）
+《我為什麼不是基督徒》（1927年）
+《心靈分析》（1927年）
+《懷疑論》（1928年）
+《婚姻與道德》（1929年），（1950年，羅素因此書而獲得諾貝爾文學獎）
+《幸福的贏得》（1930年）
+《哲學與現代世界》（1932年）
+《自由與組織》（1934年）
+《宗教與科學》（1935年）
+《權力：一種新的社會分析》（1938年）
+《西方哲學史》（1945年）
+《權威與個人》（1949年）
+《名人的惡夢》（1954年）
+《羅素回憶錄》（1956年）
+《我的哲學發展》（1959年）
+《人類有將來嗎》（1962年）
+《文明之路》
+《人類為什麼戰鬥》</code></pre>
+<p>羅素於 67 歲時搬到美國，但卻因為《婚姻與道德》這部作品而被法官「麥吉漢」認為有道德問題，取消了「紐約城市大學聘任羅素為哲學教授的任命」一案，但是到了 78 歲的時候，羅素卻又因這部作品而得到「諾貝爾文學獎」，成為第一個非文學領域作家得到諾貝爾文學獎的人。</p>
+<p>筆者對羅素為何會以《婚姻與道德》獲得「諾貝爾文學獎」這件事較有興趣，於是上網查了一下這本書，其內容如下：</p>
+<pre><code>第一章 為什麼需要性道德
+第二章 無父之鄉
+第三章 父親的勢力範圍
+第四章 生殖器崇拜，制慾主義，與罪惡
+第五章 基督教的道德
+第六章 浪漫的愛
+第七章 婦女的解放
+第八章 性知識的禁忌
+第九章 愛在人生中的地位
+第十章 婚姻
+第十一章 娼妓
+第十二章 試婚制
+第十三章 現在的家庭
+第十四章 家庭對個人心理的影響
+第十五章 家庭與國家
+第十六章 離婚
+第十七章 人口
+第十八章 優生學
+第十九章 性與個人的福利
+第二十章 性在人類價值中的地位
+第二十一章 結論</code></pre>
+<p>從這本書的目錄中，我想大家應該也可以理解為何羅素結婚、外遇與離婚的次數那麼的頻繁了，以及為何會遭受到那麼多的爭議，我想這應該也與他的學術思想有關吧！</p>
+<h3 id="參考文獻-4"><a href="#參考文獻-4">參考文獻</a></h3>
+<ul>
+<li><a href="http://zh.wikipedia.org/wiki/%E4%BC%AF%E7%89%B9%E5%85%B0%C2%B7%E7%BD%97%E7%B4%A0">維基百科：伯特蘭·羅素</a></li>
+<li><a href="http://www.books.com.tw/products/0010046583">性道德(原:婚姻與道德)</a>, 羅素著, 水牛出版社。</li>
+</ul>
+<p>【本文由陳鍾誠取材並修改自 <a href="http://zh.wikipedia.org/">維基百科</a>，採用創作共用的 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 授權】</p>
+<h2 id="偉大數學家的悲慘人生----圖靈牛頓哥德爾"><a href="#偉大數學家的悲慘人生----圖靈牛頓哥德爾">偉大「數學家」的悲慘人生 -- 圖靈、牛頓、哥德爾</a></h2>
+<p>從前我總認為，那些在教科書中提到的偉大數學家，他們必然是備受推崇，令人尊敬的。因此他們應該都是屬於「人生勝利組」的那群人，但是後來，我發現我錯了！</p>
+<p>圖靈 (Alan Turing) 應該是「電腦領域」最為人所之的偉大數學家了吧，但是如果你知道圖靈怎麼死的，那應該會覺得很驚訝且難過，因為圖靈在 1952 年由於同性戀而受審，結果在兩年後吃了一顆塗有「氰化物」的蘋果死了。</p>
+<p>而物理學之父「牛頓」應該算是人生較為順利的了，他還創建了「微積分」這門重要的學問，而且曾經擔任英國皇家鑄幣局局長，擔任局長讓他的薪水大增，並且因為表現優秀，還被英國女皇授予「艾薩克爵士」的貴族稱號，這應該算是人生勝利組了吧？</p>
+<p>但是在牛頓的生命中，除了關心物理與數學之外，他其實很著迷於「鍊金術」這門學問，他在鑄幣局局長任內，將黃金價格定為「每金衡盎司等於三英鎊十七先令10.5便士，讓英鎊成為金本位貨幣。</p>
+<p>但也因為迷戀黃金的緣故，讓牛頓用個人儲蓄大舉投資「南海公司」，結果到了 1720 年暴發了「南海泡沫」事件，南海公司的股價從 1,000英鎊狂跌到 190 英磅以下，結果牛頓損失了超過兩萬英鎊的美元 (這相當於牛頓十幾年的鑄幣局長薪水)，於是他說了下列這句經典名言：</p>
+<blockquote>
+<p>我能精準計算天體的運行規律，卻無法預測人類行為的瘋狂。</p>
+<p>I can calculate the motions of heavenly bodies, but not the madness of people.</p>
+</blockquote>
+<p>而且、在牛頓死後，他的身體內發現了大量水銀，這很可能是研究鍊金術導致汞中毒，因此也讓牛頓晚年的一些怪異行徑得到了解釋。</p>
+<p>而「哥德爾」這位二十世紀的傳奇數學家，他的人生也同樣並不精彩，而且可以說是充滿悲劇的！</p>
+<p>「哥德爾」自幼多病，而且從小就患了強迫症，後來還得了憂鬱症，並且自殺過幾次。</p>
+<p>在哥德爾的晚年，他疑神疑鬼，由於他認為別人給的飯菜有毒，因此拒絕吃其他人給的飯菜，只相信他太太 Adele Nimbursky 給的，但是後來他的太太也病倒了，結果最後哥德爾死於營養不良與進食不足，死時體重只有 65 磅，享年 72 歲。</p>
+<h3 id="參考文獻-5"><a href="#參考文獻-5">參考文獻</a></h3>
+<ul>
+<li><a href="http://blog.sina.com.cn/s/blog_71329a960100sauh.html">哥德尔轶事</a></li>
+<li><a href="http://zh.wikipedia.org/wiki/%E5%BA%93%E5%B0%94%E7%89%B9%C2%B7%E5%93%A5%E5%BE%B7%E5%B0%94">庫爾特·哥德爾</a></li>
+<li><a href="http://zh.wikipedia.org/zh-tw/%E5%8D%97%E6%B5%B7%E6%B3%A1%E6%B2%AB%E4%BA%8B%E4%BB%B6">維基百科：南海泡沫事件</a></li>
+</ul>
+<p>【本文由陳鍾誠取材並修改自 <a href="http://zh.wikipedia.org/">維基百科</a>，採用創作共用的 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 授權】</p>
+<h1 id="程式人文集"><a href="#程式人文集">程式人文集</a></h1>
+<h2 id="arduino入門教學15-amarino-的-sensorgraph-範例程式-作者cooper-maa"><a href="#arduino入門教學15-amarino-的-sensorgraph-範例程式-作者cooper-maa">Arduino入門教學(15) – Amarino 的 SensorGraph 範例程式 (作者：Cooper Maa)</a></h2>
+<p>這篇是寫給 amarino 初學者看的，目的是教導你如何執行 Amarino 的 SensorGraph 範例程式。</p>
+<h3 id="所需材料"><a href="#所需材料">所需材料</a></h3>
+<ul>
+<li>Android 手機一支</li>
+<li>Arduino x1</li>
+<li>bluetooth module x 1</li>
+<li>可變電阻或光敏電阻 (Light dependent resistor) x 1</li>
+</ul>
+<h3 id="step-1安裝-amarino"><a href="#step-1安裝-amarino">Step 1：安裝 Amarino</a></h3>
+<p>到 <a href="http://www.amarino-toolkit.net/">http://www.amarino-toolkit.net/</a> 下載下列 App 並安裝到 Android 手機上：</p>
+<ol style="list-style-type: decimal">
+<li><p><a href="http://code.google.com/p/amarino/downloads/detail?name=Amarino_2_v0_55.apk&amp;can=2&amp;q=">Amarino</a></p></li>
+<li><p><a href="http://code.google.com/p/amarino/downloads/detail?name=AmarinoPluginBundle.apk&amp;can=2&amp;q=">Amarino Plug-in Bundle</a></p></li>
+<li><p><a href="http://code.google.com/p/from-arduino-to-android-to-arduino/downloads/detail?name=SensorGraph-1.apk&amp;can=2&amp;q=">SensorGraph</a> (這是 buildcircuit.com 的版本)</p></li>
+</ol>
+<h3 id="step-2-安裝-arduino-ide-與-meetandroid-library"><a href="#step-2-安裝-arduino-ide-與-meetandroid-library">Step 2: 安裝 Arduino IDE 與 MeetAndroid Library</a></h3>
+<p>如果你電腦上還沒有 Arduino IDE，請先到 <a href="http://arduino.cc/en/Main/Software">http://arduino.cc/en/Main/Software</a> 下載軟體，下載後解壓縮即可。</p>
+<p>接著下載 <a href="http://code.google.com/p/amarino/downloads/detail?name=MeetAndroid_4.zip&amp;can=2&amp;q=">MeetAndroid Library</a> ，把 MeetAndroid 解到 Arduino IDE 安裝目錄下的 libraries 資料夾下。</p>
+<p>重新啟動 Arduino IDE，在 Sketch &gt; Import Library 底下應該會看到 MeetAndroid，如下圖：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph1.png" />
+</div>
+<h3 id="step-3連接可變電阻或光敏電阻"><a href="#step-3連接可變電阻或光敏電阻">Step 3：連接可變電阻或光敏電阻</a></h3>
+<p>參考下圖，把可變電阻中間腳位接到 Analog Input pin 5，剩下的兩支腳位，一支接到 5V，另外一支接到 GND：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph2.png" />
+</div>
+<p>如果你使用的是光敏電阻，電路的接法請參考 <a href="http://coopermaa2nd.blogspot.com/2010/12/arduino-lab8-led.html">這篇</a> 。</p>
+<h3 id="step-4-上傳-sensorgraph-tutorial-程式"><a href="#step-4-上傳-sensorgraph-tutorial-程式">Step 4： 上傳 SensorGraph Tutorial 程式</a></h3>
+<p>點 File &gt; Examples &gt; MeetAndroid &gt; SensorGraph Tutorial 打開 SensorGraph Tutorial 程式：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph3.png" />
+</div>
+<p>程式所用的 baud rate 預設是 57600 bps，如果你的藍芽模組不是 57600 bps，請做適當的調整：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph4.png" />
+</div>
+<p>然後把程式上傳到 Arduino 板子上。</p>
+<h3 id="step-5連接藍芽模組"><a href="#step-5連接藍芽模組">Step 5：連接藍芽模組</a></h3>
+<p>我用的是 <a href="http://www.wavesen.com/">廣州匯承信息科技</a> 的 HC-0x 系列藍芽模組，下圖是 HC-0x 藍芽模組的外觀：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph5.png" alt="▲ HC-0x 藍芽模組 (圖左：正面圖，圖右：背面圖）" /><p class="caption">▲ HC-0x 藍芽模組 (圖左：正面圖，圖右：背面圖）</p>
+</div>
+<p>這個藍芽模組連接方法很簡單，照下表把 Arduino 和藍芽模組連接起來就好：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Arduino</th>
+<th align="left">藍芽模組</th>
+<th align="left">備註</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">5V</td>
+<td align="left">VCC</td>
+<td align="left">注意電源不可接錯</td>
+</tr>
+<tr class="even">
+<td align="left">GND</td>
+<td align="left">GND</td>
+<td align="left">注意電源不可接錯</td>
+</tr>
+<tr class="odd">
+<td align="left">RXD</td>
+<td align="left">TXD</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">TXD</td>
+<td align="left">RXD</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph6.png" />
+</div>
+<p>連接的時候有兩點要注意：第一是電源千萬不可接錯，不然可能會把藍芽模組燒壞，第二是 Arduino 的 RXD 要接藍芽模組的 TXD，而 Arduino 的 TXD 要接藍芽模組的 RXD。</p>
+<p>通電之後，藍芽模組上的 LED 會一直閃爍：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph7.png" />
+</div>
+<h3 id="step-6執行-sensorgraph-app"><a href="#step-6執行-sensorgraph-app">Step 6：執行 SensorGraph App</a></h3>
+<p>首先，先利用 Amarino 搜尋藍芽設備，找到設備後，將藍芽設備的 MAC Address 抄起來（ <em>記得不要在 Amarino 設定任何 Event！</em> ）：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph8.png" />
+</div>
+<p>打開 SensorGraph App，輸入剛剛抄下來的 MAC Address，然後按下【Set Device ID】：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph9.png" />
+</div>
+<p>如果一切順利，Android 手機就會跟 Arduino 建立連線，並且呈現如下圖的畫面。其中，畫面上方會繒製感測讀值的圖形，而下方則顯示其即時數值（至於最底下的 SeekBar，因為我們沒有用到，所以可以忽略不管）：</p>
+<div class="figure">
+<img src="../img/ArduinoSensorGraph10.png" />
+</div>
+<h3 id="示範影片"><a href="#示範影片">示範影片</a></h3>
+<ul>
+<li><a href="http://www.youtube.com/watch?v=gn_-OjxvRjk">示範影片：sensor graph with LED controller</a></li>
+</ul>
+<h3 id="參考資料"><a href="#參考資料">參考資料</a></h3>
+<ul>
+<li><a href="http://www.buildcircuit.com/sensorgraph-using-android-amarino-and-arduino/">SensorGraph using Android, Amarino and Arduino</a></li>
+<li><a href="http://www.bygriz.com/portfolio/sensor-graph/#more-1344">Sensor Graph</a></li>
+<li><a href="http://coopermaa2nd.blogspot.tw/2012/06/amarino-android-arduino.html">以 Amarino 連接 Android 與 Arduino</a></li>
+</ul>
+<p>【本文作者為馬萬圳，原文網址為： <a href="http://coopermaa2nd.blogspot.tw/2012/06/sensorgraph.html">http://coopermaa2nd.blogspot.tw/2012/06/sensorgraph.html</a> ，由陳鍾誠編輯後納入本雜誌】</p>
+<h2 id="openni-2-基本程式範例-作者-heresy-ku"><a href="#openni-2-基本程式範例-作者-heresy-ku">OpenNI 2 基本程式範例 (作者： Heresy Ku )</a></h2>
+<p>在前一篇 <a href="http://kheresy.wordpress.com/2012/12/21/basic-openni-2/">《OpenNI 2 簡介》</a> 裡，Heresy 大概解釋了 OpenNI 2.0 的基本功能以及他的架構。而接下來的這一篇，就是要來講怎麼寫 OpenNI 2 的程式了～如果是要了解 OpenNI 1.x 版的程式開發的話，請參考 <a href="http://kheresy.wordpress.com/index_of_openni_and_kinect/documents-of-openni-1-x/">《OpenNI 1.x 教學文章》</a> 這系列的文章。</p>
+<p>首先，在安裝好 OpenNI 2.0 的 SDK 後，在安裝目錄（預設是 C:Files2）裡面，會有下列的資料夾：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">目錄</th>
+<th align="left">用途</th>
+<th align="left">32 位元</th>
+<th align="left">64 位元</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Documentation</td>
+<td align="left">OpenNI SDK 開發程式的參考文件</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Driver</td>
+<td align="left">官方支援硬體的驅動程式</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Include</td>
+<td align="left">程式開發時必須的 header 檔</td>
+<td align="left"><code>$(OPENNI2_INCLUDE)</code></td>
+<td align="left"><code>$(OPENNI2_INCLUDE64)</code></td>
+</tr>
+<tr class="even">
+<td align="left">Lib</td>
+<td align="left">程式開發時必須的 lib 檔</td>
+<td align="left"><code>$(OPENNI2_LIB)</code></td>
+<td align="left"><code>$(OPENNI2_LIB64)</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Redist</td>
+<td align="left">程式執行時必須的 runtime library（dll）</td>
+<td align="left"><code>$(OPENNI2_REDIST)</code></td>
+<td align="left"><code>$(OPENNI2_REDIST64)</code></td>
+</tr>
+<tr class="even">
+<td align="left">Samples</td>
+<td align="left">範例程式</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Tools</td>
+<td align="left">工具，目前只有 NiViewer</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="visualstudio-2010-專案設定"><a href="#visualstudio-2010-專案設定">VisualStudio 2010 專案設定</a></h3>
+<p>而如果是使用 Visual Studio 2010 來開發 OpenNI 2 的程式的話，基本上要在新建立的專案、或是現有專案裡，針對 including 和 linking 做設定，他的基本方法如下（附註 1）：</p>
+<ol style="list-style-type: decimal">
+<li>在專案上方點滑鼠右鍵，點選跳出選單最底下的「Properties」（屬性），叫出專案設定的視窗。 （<a href="http://kheresy.files.wordpress.com/2012/12/open2_pro_ch.jpg">中文版畫面</a> 、<a href="http://kheresy.files.wordpress.com/2012/12/open2_pro_en.jpg">英文版畫面</a> ）</li>
+<li>在左側導覽窗格中的「 <em>Configuration Properties</em> 」（組態屬性）下，可以找到「 <em>C/C++</em> 」，點開後選擇第一項的「 <em>Gerenal</em> 」（一般）後，右側的列表會有一個「 <em>Additional Include Directories</em> 」（其他 Include 目錄）。 要使用 OpenNI 2 的話，就需要在這裡面加入 OpenNI 2 的 header 檔所在的路徑，如果是 32 位元的專案，就是加上 <code>$(OPENNI2_INCLUDE)</code> ，如果是 64 位元的專案，則是加上 <em><code>$(OPENNI2_INCLUDE64)</code></em> 。 （附註 2）</li>
+</ol>
+<div class="figure">
+<img src="../img/open2_pro_inc_en.jpg" alt="（中文版畫面）" /><p class="caption">（中文版畫面）</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>在左側導覽窗格中，剛剛的「C/C++」下方會有一個「Linker」（連結器），點開後，裡面第一個會是「Gerenal」（一般），點選之後，在右側可以找到「Additional Library Directories」（其他程式庫目錄）。 在這裡面加入 OpenNI 2 的 lib 檔、也就是 OpenNI2.lib 這個檔案的所在的路徑，如果是 32 位元的專案，就是加上 <code>$(OPENNI2_LIB)</code> ，如果是 64 位元的專案，則是加上 <code>$(OPENNI2_LIB64)</code>。</li>
+</ol>
+<div class="figure">
+<img src="../img/open2_pro_lib1_en.jpg" alt="（中文版畫面）" /><p class="caption">（中文版畫面）</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>接下來，在左側的「Linker」（連結器）下，「General」（一般）的下面會有一個「Input」（輸入），點選後右邊可以找到「Additional Dependencies」（其他相依性）；在這邊加入 OpenNI 2.0 的 lib 檔檔案名稱，也就是「OpenNI2.lib」。</li>
+</ol>
+<div class="figure">
+<img src="../img/open2_pro_lib2_en.jpg" alt="（中文版畫面）" /><p class="caption">（中文版畫面）</p>
+</div>
+<p>這樣，基本的專案設定就完成了。</p>
+<p>要注意的是，在 Visual Studio 裡，不同的建置組態，例如 debug、release、Win32、x64，這些設定都是不同的～所以如果變更建置組態後，這些設定也是需要另外設定的。 另外，在執行時要注意的是，OpenNI 2 的運作模式和 OpenNI 1.x 不一樣，所以它是設計成讓每個應用程式，可以個別擁有各自的 runtime library（dll 檔）等檔案，所以要執行的時候，就必須要讓程式找的到 OpenNI 2 安裝資料夾中，Redist 目錄下的檔案，否則程式執行時，就會出現找不到 OpenNI2.dll 的錯誤（如下圖）。這點，其實算是比較接近一般 C++ 函式庫的使用方法的。 在 Windows 下，基本上應用程式在執行的時候，會優先去找程式執行的目錄下、是否有所需要的 dll 檔；所以最簡單的方法，就是把 Redist 目錄下所有的檔案，都複製一份到程式執行檔所在目錄就可以了。</p>
+<div class="figure">
+<img src="../img/missoni2dll.jpg" alt="圖、找不到 OpenNI2.dll 的錯誤" /><p class="caption">圖、找不到 OpenNI2.dll 的錯誤</p>
+</div>
+<p>不過如果是在 Visual Srudio 裡面進行開發的話，由於 VisualStduio 是可以設定執行時的工作目錄的，而工作目錄並不一定會是執行檔所在的路徑（預設不是），所以直接把 Redist 目錄下的檔案複製到執行檔所在路徑，在進行偵錯的時候並不一定有用。</p>
+<p>而要確定 Visual Studio 的工作路徑在哪，可以透過點選專案、按右鍵後選擇右鍵選單的「Properties」（屬性），然後在左側選擇「Configuration Properties」（組態屬性）底下的「Debugging」（偵錯）；這之後右邊會有「Working Directory」（工作目錄），他的值就代表了在透過 VisualStudio 針對這個專案進行偵錯時，他的工作目錄（英文版螢幕截圖、中文版螢幕截圖）。而如果是 Visual Studio 的預設值的話，他的值應該是「 <code>$(ProjectDir)</code> 」，也就是專案所在目錄（vcxproj 檔所在的地方）。</p>
+<p>這時候可以採取的方法主要有幾種：</p>
+<ol style="list-style-type: decimal">
+<li>將 OpenNI2 Redist 目錄下所有的檔案，都複製到專案所在目錄。</li>
+<li>修改 VisualStudio 偵錯階段的工作路徑，例如修改成 <code>$(OPENNI2_REDIST)</code> 。</li>
+<li>將 <code>$(OPENNI2_REDIST)</code> 加入到系統路徑（參考）。</li>
+</ol>
+<p>哪種方法好？基本上是看狀況，見仁見智的。由於很多時候，程式還會用到其他函式庫，也有可能會需要用到他們各自的 dll 檔，所以把這些 dll 檔統一放在一起，其實也是一種解決方案。</p>
+<h3 id="基礎流程"><a href="#基礎流程">基礎流程</a></h3>
+<p>在專案設定好後，要使用 OpenNI 2 來讀取感應器的資料的話，他的基本流程，大致如下：</p>
+<ol style="list-style-type: decimal">
+<li><code>include OpenNI.h</code> 這個檔案。之後，<code>OpenNI C++ API</code> 的東西，都會在 openni 這個 namespace 下。</li>
+<li>呼叫 <code>openni::OpenNI::initialize()</code> 這個函式來完成 OpenNI 2 環境的初始化。</li>
+<li>宣告一個 <code>openni::Device</code> 的物件，並透過他所提供的 <code>open()</code> 這個函式，來完成裝置初始化。
+<ul>
+<li>3.1 如果有多個裝置，想要指定要用哪個裝置的話，需要先透過 <code>openni::OpenNI::enumerateDevices()</code> 這個函式，來取得可使用的裝置列表，再透過指定 URI 的方式，來指定要開啟哪個裝置。</li>
+<li>3.2 如果沒有要特別指定的話，則是以 <code>openni::ANY_DEVICE</code> 當作 URI，讓系統自動決定要使用哪個裝置。</li>
+</ul></li>
+<li>建立 <code>openni::VideoStream</code> 的物件，透過他的 <code>create()</code> 這個函式，指定這個 video stream 要使用哪個裝置的哪種感應器（紅外線、彩色影像、深度影像）。 建立完成後，則是可以透過 <code>start()</code> 和 <code>stop()</code>，來控制資料的讀取。</li>
+<li>進入主迴圈，如果要讀取 video stream 當下的資料的話，則是呼叫 VideoStream 所提供的 <code>readFrame()</code> 這個函式，來把資料寫到 openni::VideoFrameRef 裡；而之後則是再透過 VideoFrameRef 所提供的函式，來做資料處理。</li>
+<li>當不再需要使用感應器的資料的時候，要記得關閉所建立出來的資料。
+<ul>
+<li>6.1 呼叫 <code>openni::VideoStream</code> 的 <code>destory()</code> 這個函式，關閉 video stream。</li>
+<li>6.2 呼叫 <code>openni::Device</code> 的 <code>close()</code>，關閉裝置。</li>
+</ul></li>
+<li>最後，則是呼叫 <code>openni::OpenNI::shutdown()</code>，來關閉整個 OpenNI 的環境。</li>
+</ol>
+<h3 id="簡單的範例"><a href="#簡單的範例">簡單的範例</a></h3>
+<p>上面是用文字來做描述，實際上寫成程式碼，就會類似 OpenNI 官方所提供的「SimpleRead」這個範例一樣（預設位置在 <code>C:\Program Files\OpenNI2\Samples\SimpleRead</code> ）。而下面，Heresy 則是在把程式碼做進一步的簡化（主要是刪掉錯誤偵測的部分），變成：</p>
+<pre class="sourceCode CPP"><code class="sourceCode cpp"><span class="co">// STL Header</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+ 
+<span class="co">// 1. include OpenNI Header</span>
+<span class="ot">#include &quot;OpenNI.h&quot;</span>
+ 
+<span class="dt">int</span> main( <span class="dt">int</span> argc, <span class="dt">char</span>** argv )
+{
+  <span class="co">// 2. initialize OpenNI</span>
+  openni::OpenNI::initialize();
+   
+  <span class="co">// 3. open a device</span>
+  openni::Device devAnyDevice;
+  devAnyDevice.open( openni::ANY_DEVICE );
+   
+  <span class="co">// 4. create depth stream</span>
+  openni::VideoStream streamDepth;
+  streamDepth.create( devAnyDevice, openni::SENSOR_DEPTH );
+  streamDepth.start();
+   
+  <span class="co">// 5 main loop, continue read</span>
+  openni::VideoFrameRef frameDepth;
+  <span class="kw">for</span>( <span class="dt">int</span> i = <span class="dv">0</span>; i &lt; <span class="dv">100</span>; ++ i )
+  {
+    <span class="co">// 5.1 get frame</span>
+    streamDepth.readFrame( &amp;frameDepth );
+     
+    <span class="co">// 5.2 get data array</span>
+    <span class="dt">const</span> openni::DepthPixel* pDepth 
+            = (<span class="dt">const</span> openni::DepthPixel*)frameDepth.getData();
+     
+    <span class="co">// 5.3 output the depth value of center point</span>
+    <span class="dt">int</span> idx = frameDepth.getWidth() * ( frameDepth.getHeight() + <span class="dv">1</span> ) / <span class="dv">2</span>;
+    std::cout &lt;&lt; pDepth[idx] &lt;&lt; std::endl;
+  }
+   
+  <span class="co">// 6. close</span>
+  streamDepth.destroy();
+  devAnyDevice.close();
+   
+  <span class="co">// 7. shutdown</span>
+  openni::OpenNI::shutdown();
+   
+  <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre>
+<p>程式碼的內容，大致上就如同上一個段落所說明的，所以基本上這邊就只針對部分地方做補充的說明。 首先是第四部份，建立 VideoStream 的部分。這邊基本上是透過 VideoStream 物件（devAnyDevice）本身的 <code>create()</code> 函式，來指定這個 video stream 要使用哪個裝置的哪種感應器；在這個例子裡，所使用的是 <code>openni::SENSOR_DEPTH</code>，也就是深度感應器的部分。而在目前的 OpenNI 2 裡，除了 SENSOR_DEPTH 外，還有對應到彩色影像的 SENSOR_COLOR，以及對應到紅外線影像的 SENSOR_IR 可以使用。</p>
+<p>而在資料讀取、也就是「5」的部分，在透過 VideoStream 的 <code>readFrame(</code>) 這個函式，把這個時間點的影像資料，寫到 VideoFrameRef 後，要讀取深度資料，就是要透過 VideoFrameRef 的物件（frameDepth）來做存取了～在一般狀況下，主要是透過他的 getWidth() 和 getHeight() 這兩個函式，來取得這個影像的大小。而透過 getData()，則可以取得這個影像的資料；他所回傳的型別，是無型別的指標、 <code>void*</code> ，實際上是指到一個儲存影像資料的陣列的指標。 由於 OpenNI 2 把影像資料的讀取統一化了，同時也把 OpenNI 1.x 的 MapMetaData 的概念拿掉了，所以在資料的讀取上，會變得比較「低階」一點。首先，如果要做資料的讀取，需要自己根據影像的類型，來做轉型的動作。像在這邊由於是使用深度感應器，影像中每一個像素的資料型別都是 <code>openni::DepthPixel</code>；所以在這邊，就是需要把 <code>void*</code> 強制轉型成為 DepthPixel 的指標來使用（上方範例 5.2 的部分）（附註 3）。</p>
+<p>經過這樣的處理，pDpeth 就是一個指到這張深度影像資料的一維振烈的指標，而這個陣列的大小，就是他的寬（透過 <code>getWidth()</code> 取得）乘上高（透過 <code>getHieght()</code> 取得）；如果是 <code>640 x 480</code> 的話，pDpeth 所指到的陣列，大小就是 <code>640 x480 = 307,200</code> 了～而其中每一項，都代表一個點的深度；如果是要取得 ( x, y ) 這個點的值的話，就是要做一個簡單的座標換算，去取得他在陣列中的 index。這個基本的換算公式，就是：</p>
+<blockquote>
+<p>int idx = x + y * width;</p>
+</blockquote>
+<p>只要把 x 和 y 帶入上面的公式，就可以簡單地算出每一個點在陣列中的位置，並取出他的值了。 而如果是要使用彩色影像的話，他預設的型別是 <code>openni::RGB888Pixel</code> 這個 structure，裡面是以三個 unsigned char 的變數，分別儲存著 RGB 三種顏色的值；而如果是紅外線影像的話，型別則是 <code>openni::Grayscale16Pixel</code> ，實際型別則是和 DepthPixel 一樣，是 unsigned short。</p>
+<h3 id="小結"><a href="#小結">小結</a></h3>
+<p>這篇算是 OpenNI 2 的第一篇教學文章，就先寫到這了～這邊的範例，基本上應該就算是一個算是最簡單，透過 OpenNI 2 來做深度資料讀取的範例了；其中有很大的篇幅，其實是在講如何設定專案就是了。</p>
+<p>而這個範例程式在執行後，會讀取深度感應器的 100 個畫面，並把影像中樣的深度值做輸出，所以在執行後，會看到畫面上有一堆數字出現；由於這部分的程式並沒有繪圖的部分，所以執行後只會看到一串數字，是不會有影像出現的。</p>
+<p>實際上，這個範例程式比較好的寫法，應該還是要像官方的「SimpleRead」這個範例一樣，加上錯誤偵測會更好，不過這邊為了篇幅，還是先把它拿掉了。而另外，這邊基本上是只針對單一個 video stream 做操作的寫法，如果是要同時讀取的彩色影像和深度影像的話，則可能還要再做一點的修改。</p>
+<p>接下來…就期待下一篇文章吧～</p>
+<h3 id="附註"><a href="#附註">附註</a></h3>
+<ol style="list-style-type: decimal">
+<li>這邊的英文版是 Visual Studio 2010 的畫面、文字，中文版則是 Visual Studio 2012 的畫面與文字；不同的版本、不同的設定，選項可能會不盡相同，請自行根據狀況調整。 如果有多個項目的話，可以用「;」做區隔。</li>
+<li>在 OpenNI 2 裡面，透過 Kinect 或 Xtion 取得的深度影像的每一個像素、DepthPixel 的單位，預設應該還是一樣是「mm」（公釐、毫米）；不過實際上，他也有定義了幾種不同的 PixelFormat，代表其實是有可能可以娶到其他單位的深度的～所以其實要比較保險一點的話，還是得檢查 VideoMode 裡的 PixelFormat，才能確定 DepthPixel 代表的意義。</li>
+</ol>
+<p>【本文來自 Heresy's Space 的網誌，原文網址為： <a href="http://kheresy.wordpress.com/2012/12/24/openni2-basic-example/">http://kheresy.wordpress.com/2012/12/24/openni2-basic-example/</a> ，由 Heresy 捐出網誌給程式人雜誌，經陳鍾誠編輯後納入雜誌】</p>
+<h2 id="根號求解-作者bridan"><a href="#根號求解-作者bridan">根號求解 (作者：Bridan)</a></h2>
+<p>可能有人會好奇，計算機如何求得開根號數值，這裡提供個人所知的兩種方法。</p>
+<p><strong>方法一：</strong> <a href="http://zh.wikipedia.org/w/index.php?title=%E5%B9%B3%E6%96%B9%E6%A0%B9&amp;variant=zh-tw">長除式演算法</a>，可直接筆算求平方根值。</p>
+<p>運用 (a + b)2- (2a + b) b = a2，初值 a = 0，反覆求 a 的後一位數值 b 。</p>
+<p>例 Square(152.276)</p>
+<pre><code>  1  2. 3  4
+ ------------   列式時以小數點為基準，兩位兩位一組。
+/ 1 52.27 60    (2a + b) b
+  1           = (2 x 0 + 1) x 1 , a = 0
+ ------------
+    52
+    44        = (2 x 10 + 2) x 2 , a = 10
+ ------------
+     8 27
+     7 29     = (2 x 120 + 3) x 3 , a = 120
+ ------------
+       98 60
+       98 56  = (2 x 1230 + 4) x 4 , a = 1230
+ ------------
+           6</code></pre>
+<p>　</p>
+<p><strong>方法二：</strong> 以 <a href="http://zh.wikipedia.org/w/index.php?title=%E5%B9%B3%E6%96%B9%E6%A0%B9&amp;variant=zh-tw">牛頓迭代法</a> 計算求解</p>
+<pre><code>X = A1/N，將 A 開 N 次方根，
+
+Xn+1 = [(N-1)Xn + A/XnN-1]/N ，(N＞0)
+
+N = 2 時 ，A＞1，1＜Xn＜A
+Xn+1 = [Xn + A/Xn]/2 ，(挑選適當的 Xn 初值可以快速收斂，只要計算兩三次就可得到正確數值)</code></pre>
+<p>其原理為，</p>
+<pre><code>X = [X + A/X]/2
+2X = X + A/X
+2X2 = X2 + A
+X2 = A
+X = A1/2</code></pre>
+<p>這方法是我從 <a href="http://www.anobii.com/books/01e14970c407f6b3a5/">Engineering Formulas</a> 這本書學到的，此書為 <em>Reiner Gieck, Kurt Gieck</em> 合著 McGraw-Hill 出版 ISBN 9780070234550，它是我在公司文管中心發現的寶藏。</p>
+<p>在網際網路尚未發達前，這類工具書對工程師是非常重要的，尤其需要常常查工程或數學公式很有用。</p>
+<p>(本文來自「研發養成所」 Bridan 的網誌，原文網址為 <a href="http://4rdp.blogspot.tw/2008/04/blog-post_9406.html">http://4rdp.blogspot.tw/2008/04/blog-post_9406.html</a> ，由陳鍾誠編輯後納入程式人雜誌)</p>
+<h2 id="visual-basic-6.0大整數運算-加法與乘法-使用-array-字串-作者廖憲得-0xde"><a href="#visual-basic-6.0大整數運算-加法與乘法-使用-array-字串-作者廖憲得-0xde">Visual Basic 6.0:大整數運算 加法與乘法 (使用 Array 字串) (作者：廖憲得 0xde)</a></h2>
+<h3 id="大整數加法"><a href="#大整數加法">大整數加法</a></h3>
+<div class="figure">
+<img src="../img/VbBigAdd.JPG" />
+</div>
+<pre class="sourceCode monobasic"><code class="sourceCode monobasic"><span class="kw">Private</span> <span class="kw">Sub </span>Command1_Click()
+    Text3 = <span class="st">&quot;&quot;</span>
+    <span class="kw">ReDim</span> TempArray(999)
+    
+    K = 0
+    
+    <span class="kw">For </span>i = Len(Text1) <span class="kw">To</span> 1 <span class="kw">Step</span> -1
+        TempArray(K) = Mid(Text1, i, 1)
+        K = K + 1
+    <span class="kw">Next </span>i
+    
+    K = 0
+    
+    <span class="kw">For </span>i = Len(Text2) <span class="kw">To</span> 1 <span class="kw">Step</span> -1
+        Temp = Val(TempArray(K)) + Val(Mid(Text2, i, 1))
+        TempArray(K) = Temp Mod 10
+        K = K + 1
+        TempArray(K) = Val(TempArray(K)) + Val(Temp \ 10)
+    <span class="kw">Next </span>i
+        
+    <span class="kw">For </span>i = 0 <span class="kw">To</span> UBound(TempArray)
+        <span class="kw">If </span>Val(TempArray(i)) &gt; 9 <span class="kw">Then</span>
+            Temp = TempArray(i)
+            TempArray(K) = Temp Mod 10
+            K = K + 1
+            TempArray(K) = Val(TempArray(K)) + Val(Temp \ 10)
+        <span class="kw">End If</span>
+    <span class="kw">Next </span>i
+        
+    <span class="kw">For </span>i = UBound(TempArray) <span class="kw">To</span> 0 <span class="kw">Step</span> -1
+        Text3 = Text3 &amp; TempArray(i)
+    <span class="kw">Next </span>i
+    
+    <span class="kw">Do </span>Until Val(Mid(Text3, 1, 1)) &lt;&gt; 0
+        Text3 = Mid(Text3, 2)
+    <span class="kw">Loop</span>
+<span class="kw">End Sub</span></code></pre>
+<ul>
+<li>原始碼下載： <a href="http://files.dotblogs.com.tw/0xde/1311/20131113113943512.rar">大數運算-大數加法.rar</a></li>
+</ul>
+<h3 id="大整數乘法"><a href="#大整數乘法">大整數乘法</a></h3>
+<div class="figure">
+<img src="../img/VbBigMul.JPG" />
+</div>
+<pre class="sourceCode monobasic"><code class="sourceCode monobasic"><span class="kw">Private</span> <span class="kw">Sub </span>Command1_Click()
+    Text3 = <span class="st">&quot;&quot;</span>
+    <span class="kw">ReDim</span> TempArray(999)
+    
+    K = 0
+    
+    <span class="kw">For </span>i = Len(Text1) <span class="kw">To</span> 1 <span class="kw">Step</span> -1
+            NowIndex = K
+        <span class="kw">For </span>j = Len(Text2) <span class="kw">To</span> 1 <span class="kw">Step</span> -1
+            Temp = TempArray(NowIndex) + Mid(Text1, i, 1) * Mid(Text2, j, 1)
+            TempArray(NowIndex + 1) = Temp \ 10 + TempArray(NowIndex + 1)
+            TempArray(NowIndex) = Temp Mod 10
+            NowIndex = NowIndex + 1
+        <span class="kw">Next </span>j
+            K = K + 1
+    <span class="kw">Next </span>i
+    
+    <span class="kw">For </span>i = UBound(TempArray) <span class="kw">To</span> 0 <span class="kw">Step</span> -1
+        Text3 = Text3 &amp; TempArray(i)
+    <span class="kw">Next </span>i
+    
+    <span class="kw">Do </span>Until Val(Mid(Text3, 1, 1)) &lt;&gt; 0
+        Text3 = Mid(Text3, 2)
+    <span class="kw">Loop</span>
+<span class="kw">End Sub</span></code></pre>
+<ul>
+<li>原始碼下載： <a href="http://files.dotblogs.com.tw/0xde/1311/20131113112231481.rar">大數運算-大數乘法.rar</a></li>
+</ul>
+<p>【本文作者為「廖憲得」，原文網址為： <a href="http://www.dotblogs.com.tw/0xde/archive/2013/11/13/129111.aspx">http://www.dotblogs.com.tw/0xde/archive/2013/11/13/129111.aspx</a> 與 <a href="http://www.dotblogs.com.tw/0xde/archive/2013/11/13/129101.aspx">http://www.dotblogs.com.tw/0xde/archive/2013/11/13/129101.aspx</a> ，由陳鍾誠編輯後納入本雜誌】</p>
+<h2 id="開放電腦計畫-9-16-位元微控制器-mcu0-的輸出入----輪詢篇-作者陳鍾誠"><a href="#開放電腦計畫-9-16-位元微控制器-mcu0-的輸出入----輪詢篇-作者陳鍾誠">開放電腦計畫 (9) – 16 位元微控制器 MCU0 的輸出入 -- 輪詢篇 (作者：陳鍾誠)</a></h2>
+<p>在上一期當中，我們說明了 MCU0 這顆 16 位元處理器的中斷處理方式，文章網址如下：</p>
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201402/htm/article5.html">開放電腦計畫 (8) – 16 位元微控制器 MCU0 的中斷處理</a></li>
+</ul>
+<p>在本文中，我們將說明如何使用輪詢的方式實作了 MCU0 的鍵盤與文字輸出的函數。</p>
+<h3 id="mcu0-的中斷位元"><a href="#mcu0-的中斷位元">MCU0 的中斷位元</a></h3>
+<p>在電腦中，進行輸出入所採用的方式，在指令上可分為「專用輸出入指令」與「記憶體映射輸出入」兩種， 在本文中我們將用「記憶體映射輸出入」進行輸出入。</p>
+<p>另外、進行輸出入的驅動方式，可分為「輪詢」與「中斷」兩種方式，本文將採用「輪詢」的方式實作。</p>
+<h3 id="mcu0-的輸出入實作方式"><a href="#mcu0-的輸出入實作方式">MCU0 的輸出入實作方式</a></h3>
+<pre class="sourceCode verilog"><code class="sourceCode verilog"><span class="ot">`define OP   IR[15:12] </span><span class="co">// 運算碼</span>
+<span class="ot">`define C    IR[11:0]  </span><span class="co">// 常數欄位</span>
+<span class="ot">`define SC8  $signed(IR[7:0]) </span><span class="co">// 常數欄位</span>
+<span class="ot">`define C4   IR[3:0]   </span><span class="co">// 常數欄位</span>
+<span class="ot">`define Ra   IR[7:4]   </span><span class="co">// Ra</span>
+<span class="ot">`define Rb   IR[3:0]   </span><span class="co">// Rb</span>
+<span class="ot">`define A    R[0]      </span><span class="co">// 累積器</span>
+<span class="ot">`define LR   R[1]      </span><span class="co">// 狀態暫存器</span>
+<span class="ot">`define SW   R[2]      </span><span class="co">// 狀態暫存器</span>
+<span class="ot">`define SP   R[3]      </span><span class="co">// 堆疊暫存器</span>
+<span class="ot">`define PC   R[4]      </span><span class="co">// 程式計數器</span>
+<span class="ot">`define N    `SW[15]   </span><span class="co">// 負號旗標</span>
+<span class="ot">`define Z    `SW[14]   </span><span class="co">// 零旗標</span>
+<span class="ot">`define I    `SW[3]    </span><span class="co">// 是否中斷中</span>
+<span class="ot">`define M    m[`C]     </span><span class="co">// 存取記憶體</span>
+
+<span class="kw">module</span> mcu(<span class="dt">input</span> clock, <span class="dt">input</span> interrupt, <span class="dt">input</span>[<span class="dv">2</span>:<span class="dv">0</span>] irq);
+  <span class="dt">parameter</span> [<span class="dv">3</span>:<span class="dv">0</span>] LD=<span class="bn">4&#39;h0</span>,ST=<span class="bn">4&#39;h1</span>,ADD=<span class="bn">4&#39;h2</span>,SUB=<span class="bn">4&#39;h3</span>,MUL=<span class="bn">4&#39;h4</span>,DIV=<span class="bn">4&#39;h5</span>,AND=<span class="bn">4&#39;h6</span>,OR=<span class="bn">4&#39;h7</span>,XOR=<span class="bn">4&#39;h8</span>,CMP=<span class="bn">4&#39;h9</span>,JMP=<span class="bn">4&#39;hA</span>,JEQ=<span class="bn">4&#39;hB</span>, JLT=<span class="bn">4&#39;hC</span>, JLE=<span class="bn">4&#39;hD</span>, CALL=<span class="bn">4&#39;hE</span>, OP8=<span class="bn">4&#39;hF</span>;
+  <span class="dt">parameter</span> [<span class="dv">3</span>:<span class="dv">0</span>] LDI=<span class="bn">4&#39;h0</span>, MOV=<span class="bn">4&#39;h2</span>, PUSH=<span class="bn">4&#39;h3</span>, POP=<span class="bn">4&#39;h4</span>, SHL=<span class="bn">4&#39;h5</span>, SHR=<span class="bn">4&#39;h6</span>, ADDI=<span class="bn">4&#39;h7</span>, SUBI=<span class="bn">4&#39;h8</span>, NEG=<span class="bn">4&#39;h9</span>, SWI=<span class="bn">4&#39;hA</span>, NSW=<span class="bn">4&#39;hD</span>, RET=<span class="bn">4&#39;hE</span>, IRET=<span class="bn">4&#39;hF</span>;
+  <span class="dt">reg</span> [<span class="dv">15</span>:<span class="dv">0</span>] IR;    <span class="co">// 指令暫存器</span>
+  <span class="dt">reg</span> <span class="dt">signed</span> [<span class="dv">15</span>:<span class="dv">0</span>] R[<span class="dv">0</span>:<span class="dv">4</span>];
+  <span class="dt">reg</span> <span class="dt">signed</span> [<span class="dv">15</span>:<span class="dv">0</span>] pc0;
+  <span class="dt">reg</span> <span class="dt">signed</span> [<span class="dv">15</span>:<span class="dv">0</span>] m [<span class="dv">0</span>:<span class="dv">4095</span>]; <span class="co">// 內部的快取記憶體</span>
+  <span class="dt">integer</span> i;
+  <span class="kw">initial</span>  <span class="co">// 初始化</span>
+  <span class="kw">begin</span>
+    <span class="ot">`PC</span> = <span class="dv">0</span>; <span class="co">// 將 PC 設為起動位址 0</span>
+    <span class="ot">`SW</span> = <span class="dv">0</span>;
+    <span class="dt">$readmemh</span>(<span class="st">&quot;mcu0io.hex&quot;</span>, m);
+    <span class="kw">for</span> (i=<span class="dv">0</span>; i &lt; <span class="dv">32</span>; i=i<span class="dv">+1</span>) <span class="kw">begin</span>
+       <span class="dt">$display</span>(<span class="st">&quot;%x %x&quot;</span>, i, m[i]);
+    <span class="kw">end</span>
+  <span class="kw">end</span>
+  
+  <span class="kw">always</span> @(<span class="kw">posedge</span> clock) <span class="kw">begin</span> <span class="co">// 在 clock 時脈的正邊緣時觸發</span>
+    IR = m[<span class="ot">`PC</span>];                <span class="co">// 指令擷取階段：IR=m[PC], 2 個 Byte 的記憶體</span>
+    pc0= <span class="ot">`PC</span>;                   <span class="co">// 儲存舊的 PC 值在 pc0 中。</span>
+    <span class="ot">`PC</span> = <span class="ot">`PC</span><span class="dv">+1</span>;                <span class="co">// 擷取完成，PC 前進到下一個指令位址</span>
+    <span class="kw">case</span> (<span class="ot">`OP</span>)                  <span class="co">// 解碼、根據 OP 執行動作</span>
+      <span class="dv">LD:</span> <span class="ot">`A</span> = <span class="ot">`M</span>;              <span class="co">// LD C</span>
+      <span class="dv">ST:</span> <span class="ot">`M</span> = <span class="ot">`A</span>;              <span class="co">// ST C</span>
+      <span class="dv">ADD:</span> <span class="ot">`A</span> = <span class="ot">`A</span> + <span class="ot">`M</span>;        <span class="co">// ADD C</span>
+      <span class="dv">SUB:</span> <span class="ot">`A</span> = <span class="ot">`A</span> - <span class="ot">`M</span>;        <span class="co">// SUB C</span>
+      <span class="dv">MUL:</span> <span class="ot">`A</span> = <span class="ot">`A</span> * <span class="ot">`M</span>;        <span class="co">// MUL C</span>
+      <span class="dv">DIV:</span> <span class="ot">`A</span> = <span class="ot">`A</span> / <span class="ot">`M</span>;        <span class="co">// DIV C</span>
+      <span class="dv">AND:</span> <span class="ot">`A</span> = <span class="ot">`A</span> &amp; <span class="ot">`M</span>;        <span class="co">// AND C</span>
+      <span class="dv">OR :</span> <span class="ot">`A</span> = <span class="ot">`A</span> | <span class="ot">`M</span>;        <span class="co">// OR  C</span>
+      <span class="dv">XOR:</span> <span class="ot">`A</span> = <span class="ot">`A</span> ^ <span class="ot">`M</span>;        <span class="co">// XOR C</span>
+      <span class="dv">CMP:</span> <span class="kw">begin</span> <span class="ot">`N</span>=(<span class="ot">`A</span> &lt; <span class="ot">`M</span>); <span class="ot">`Z</span>=(<span class="ot">`A</span>==<span class="ot">`M</span>); <span class="kw">end</span> <span class="co">// CMP C</span>
+      <span class="dv">JMP:</span> <span class="ot">`PC</span> = <span class="ot">`C</span>;            <span class="co">// JSUB C</span>
+      <span class="dv">JEQ:</span> <span class="kw">if</span> (<span class="ot">`Z</span>) <span class="ot">`PC</span>=<span class="ot">`C</span>;      <span class="co">// JEQ C</span>
+      <span class="dv">JLT:</span> <span class="kw">if</span> (<span class="ot">`N</span>) <span class="ot">`PC</span>=<span class="ot">`C</span>;      <span class="co">// JLT C</span>
+      <span class="dv">JLE:</span> <span class="kw">if</span> (<span class="ot">`N</span> || <span class="ot">`Z</span>) <span class="ot">`PC</span>=<span class="ot">`C</span>;<span class="co">// JLE C</span>
+      <span class="dv">CALL:</span><span class="kw">begin</span> <span class="ot">`LR</span> = <span class="ot">`PC</span>; <span class="ot">`PC</span> = <span class="ot">`C</span>; <span class="kw">end</span> <span class="co">// CALL C</span>
+      <span class="dv">OP8:</span> <span class="kw">case</span> (IR[<span class="dv">11</span>:<span class="dv">8</span>])      <span class="co">// OP8: 加長運算碼</span>
+        <span class="dv">LDI:</span>  R[<span class="ot">`Ra</span>] = <span class="ot">`C4</span>;                         <span class="co">// LDI C</span>
+        <span class="dv">ADDI:</span> R[<span class="ot">`Ra</span>] = R[<span class="ot">`Ra</span>] + <span class="ot">`C4</span>;                <span class="co">// ADDI C</span>
+        <span class="dv">SUBI:</span> R[<span class="ot">`Ra</span>] = R[<span class="ot">`Ra</span>] - <span class="ot">`C4</span>;                <span class="co">// ADDI C</span>
+        <span class="dv">MOV:</span>  R[<span class="ot">`Ra</span>] = R[<span class="ot">`Rb</span>];                      <span class="co">// MOV Ra, Rb</span>
+        <span class="dv">PUSH:</span> <span class="kw">begin</span> <span class="ot">`SP</span>=<span class="ot">`SP</span><span class="dv">-1</span>; m[<span class="ot">`SP</span>] = R[<span class="ot">`Ra</span>]; <span class="kw">end</span> <span class="co">// PUSH Ra</span>
+        <span class="dv">POP:</span>  <span class="kw">begin</span> R[<span class="ot">`Ra</span>] = m[<span class="ot">`SP</span>]; <span class="ot">`SP</span>=<span class="ot">`SP</span><span class="dv">+1</span>; <span class="kw">end</span> <span class="co">// POP  Ra</span>
+        <span class="dv">SHL:</span>  R[<span class="ot">`Ra</span>] = R[<span class="ot">`Ra</span>] &lt;&lt; <span class="ot">`C4</span>;               <span class="co">// SHL C</span>
+        <span class="dv">SHR:</span>  R[<span class="ot">`Ra</span>] = R[<span class="ot">`Ra</span>] &gt;&gt; <span class="ot">`C4</span>;               <span class="co">// SHR C</span>
+        <span class="dv">SWI:</span>  <span class="dt">$display</span>(<span class="st">&quot;SWI C8=%d A=%d&quot;</span>, <span class="ot">`SC8</span>, <span class="ot">`A</span>); <span class="co">// SWI C</span>
+        <span class="dv">NEG:</span>  R[<span class="ot">`Ra</span>] = ~R[<span class="ot">`Ra</span>];                     <span class="co">// NEG Ra</span>
+        <span class="dv">NSW:</span>  <span class="kw">begin</span> <span class="ot">`N</span>=~<span class="ot">`N</span>; <span class="ot">`Z</span>=~<span class="ot">`Z</span>; <span class="kw">end</span>             <span class="co">// NSW  (negate N, Z)</span>
+        <span class="dv">RET:</span>  <span class="ot">`PC</span> = <span class="ot">`LR</span>;                            <span class="co">// RET</span>
+        <span class="dv">IRET:</span> <span class="kw">begin</span> <span class="ot">`PC</span> = <span class="ot">`LR</span>; <span class="ot">`I</span> = <span class="dv">0</span>; <span class="kw">end</span>          <span class="co">// IRET</span>
+        <span class="kw">default</span>: <span class="dt">$display</span>(<span class="st">&quot;op8=%d , not defined!&quot;</span>, IR[<span class="dv">11</span>:<span class="dv">8</span>]);
+      <span class="kw">endcase</span>
+    <span class="kw">endcase</span>
+    <span class="co">// 印出 PC, IR, SW, A 等暫存器值以供觀察</span>
+    <span class="dt">$display</span>(<span class="st">&quot;%4dns PC=%x IR=%x, SW=%x, A=%d SP=%x LR=%x&quot;</span>, <span class="dt">$stime</span>, pc0, IR, <span class="ot">`SW</span>, <span class="ot">`A</span>, <span class="ot">`SP</span>, <span class="ot">`LR</span>);
+    <span class="kw">if</span> (!<span class="ot">`I</span> &amp;&amp; interrupt) <span class="kw">begin</span>
+      <span class="ot">`I</span> = <span class="dv">1</span>;
+      <span class="ot">`LR</span> = <span class="ot">`PC</span>;
+      <span class="ot">`PC</span> = irq;
+    <span class="kw">end</span>    
+  <span class="kw">end</span>
+<span class="kw">endmodule</span>
+
+<span class="kw">module</span> keyboard;
+<span class="dt">reg</span> [<span class="dv">7</span>:<span class="dv">0</span>] ch[<span class="dv">0</span>:<span class="dv">20</span>];
+<span class="dt">reg</span> [<span class="dv">7</span>:<span class="dv">0</span>] i;
+<span class="kw">initial</span> <span class="kw">begin</span>
+  i=<span class="dv">0</span>;
+  {ch[<span class="dv">0</span>],ch[<span class="dv">1</span>],ch[<span class="dv">2</span>],ch[<span class="dv">3</span>],ch[<span class="dv">4</span>],ch[<span class="dv">5</span>],ch[<span class="dv">6</span>],ch[<span class="dv">7</span>],ch[<span class="dv">8</span>],ch[<span class="dv">9</span>],ch[<span class="dv">10</span>],ch[<span class="dv">11</span>],ch[<span class="dv">12</span>],ch[<span class="dv">13</span>]} = <span class="st">&quot;hello verilog!&quot;</span>;
+  main.mcu0.m[<span class="bn">16&#39;h07F0</span>] = <span class="dv">0</span>;
+  main.mcu0.m[<span class="bn">16&#39;h07F1</span>] = <span class="dv">0</span>;
+<span class="kw">end</span>
+
+<span class="kw">always</span> <span class="bn">#20</span> <span class="kw">begin</span> 
+  <span class="kw">if</span> (main.mcu0.m[<span class="bn">16&#39;h07F0</span>] == <span class="dv">0</span>) <span class="kw">begin</span>
+    main.mcu0.m[<span class="bn">16&#39;h07F1</span>] = {<span class="bn">8&#39;h0</span>, ch[i]};
+    main.mcu0.m[<span class="bn">16&#39;h07F0</span>] = <span class="dv">1</span>;
+    <span class="dt">$display</span>(<span class="st">&quot;key = %c&quot;</span>, ch[i]);
+    i = i<span class="dv">+1</span>;
+  <span class="kw">end</span>
+<span class="kw">end</span> 
+
+<span class="kw">endmodule</span>
+
+<span class="kw">module</span> screen;
+<span class="dt">reg</span> [<span class="dv">7</span>:<span class="dv">0</span>] ch;
+<span class="kw">initial</span> <span class="kw">begin</span>
+  main.mcu0.m[<span class="bn">16&#39;h07F2</span>] = <span class="dv">0</span>;
+  main.mcu0.m[<span class="bn">16&#39;h07F3</span>] = <span class="dv">0</span>;
+<span class="kw">end</span>
+<span class="kw">always</span> <span class="bn">#10</span> <span class="kw">begin</span>
+  <span class="kw">if</span> (main.mcu0.m[<span class="bn">16&#39;h07F2</span>] == <span class="dv">1</span>) <span class="kw">begin</span>
+    ch = main.mcu0.m[<span class="bn">16&#39;h07F3</span>][<span class="dv">7</span>:<span class="dv">0</span>];
+    <span class="dt">$display</span>(<span class="st">&quot;screen %c&quot;</span>, ch);
+    main.mcu0.m[<span class="bn">16&#39;h07F2</span>] = <span class="dv">0</span>;
+  <span class="kw">end</span>
+<span class="kw">end</span> 
+<span class="kw">endmodule</span>
+
+<span class="kw">module</span> main;                <span class="co">// 測試程式開始</span>
+<span class="dt">reg</span> clock;                  <span class="co">// 時脈 clock 變數</span>
+<span class="dt">reg</span> interrupt;
+<span class="dt">reg</span> [<span class="dv">2</span>:<span class="dv">0</span>] irq;
+
+mcu mcu0(clock, interrupt, irq); <span class="co">// 宣告 cpu0mc 處理器</span>
+keyboard kb0();
+screen   sc0();
+
+<span class="kw">initial</span> <span class="kw">begin</span>
+  clock = <span class="dv">0</span>;          <span class="co">// 一開始 clock 設定為 0</span>
+  interrupt = <span class="dv">0</span>;
+  irq = <span class="dv">2</span>;
+<span class="kw">end</span>
+<span class="kw">always</span> <span class="bn">#10</span> clock=~clock;    <span class="co">// 每隔 10ns 反相，時脈週期為 20ns</span>
+
+<span class="kw">initial</span> <span class="bn">#4000</span> <span class="dt">$finish</span>;      <span class="co">// 停止測試。</span>
+
+<span class="kw">endmodule</span></code></pre>
+<h3 id="輸入機器碼與組合語言"><a href="#輸入機器碼與組合語言">輸入機器碼與組合語言</a></h3>
+<pre><code>07F0  // 00    WAITK:  LD    0x7F0   ; wait keyboard
+9010  // 01            CMP   K0
+B000  // 02            JEQ   WAIT
+07F1  // 03            LD    0x7F1   ; read key
+1011  // 04            ST    KEY
+0010  // 05            LD    K0
+17F0  // 06            ST    0x7F0   ; release keyboard
+07F2  // 07    WAITS:  LD    0x7F2   ; wait screen
+0010  // 08            CMP   K0
+B007  // 09            JEQ   WAITS
+0011  // 0A            LD    KEY     ; print key
+17F3  // 0B            ST    0x7F3
+F001  // 0C            LDI   1
+17F2  // 0D            ST    0x7F2   ; eanble screen
+A000  // 0E            JMP   WAIT
+0000  // 0F
+0000  // 10    K0:     WORD  0
+0000  // 11    KEY:    WORD  0</code></pre>
+<h3 id="執行結果"><a href="#執行結果">執行結果</a></h3>
+<pre><code>D:\Dropbox\Public\web\oc\code\mcu0&gt;iverilog -o mcu0io mcu0io.v
+
+D:\Dropbox\Public\web\oc\code\mcu0&gt;vvp mcu0io
+WARNING: mcu0io.v:29: $readmemh(mcu0io.hex): Not enough words in the file for th
+e requested range [0:4095].
+00000000 07f0
+00000001 9010
+00000002 b000
+00000003 07f1
+00000004 1011
+00000005 0010
+00000006 17f0
+00000007 07f2
+00000008 0010
+00000009 b007
+0000000a 0011
+0000000b 17f3
+0000000c f001
+0000000d 17f2
+0000000e a000
+0000000f 0000
+00000010 0000
+00000011 0000
+00000012 xxxx
+00000013 xxxx
+00000014 xxxx
+00000015 xxxx
+00000016 xxxx
+00000017 xxxx
+00000018 xxxx
+00000019 xxxx
+0000001a xxxx
+0000001b xxxx
+0000001c xxxx
+0000001d xxxx
+0000001e xxxx
+0000001f xxxx
+  10ns PC=0000 IR=07f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = h
+  30ns PC=0001 IR=9010, SW=4000, A=    0 SP=xxxx LR=xxxx
+  50ns PC=0002 IR=b000, SW=4000, A=    0 SP=xxxx LR=xxxx
+  70ns PC=0000 IR=07f0, SW=4000, A=    1 SP=xxxx LR=xxxx
+  90ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 110ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 130ns PC=0003 IR=07f1, SW=0000, A=  104 SP=xxxx LR=xxxx
+ 150ns PC=0004 IR=1011, SW=0000, A=  104 SP=xxxx LR=xxxx
+ 170ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 190ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = e
+ 210ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 230ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 250ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 270ns PC=000a IR=0011, SW=0000, A=  104 SP=xxxx LR=xxxx
+ 290ns PC=000b IR=17f3, SW=0000, A=  104 SP=xxxx LR=xxxx
+ 310ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 330ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen h
+ 350ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 370ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 390ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 410ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 430ns PC=0003 IR=07f1, SW=0000, A=  101 SP=xxxx LR=xxxx
+ 450ns PC=0004 IR=1011, SW=0000, A=  101 SP=xxxx LR=xxxx
+ 470ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 490ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = l
+ 510ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 530ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 550ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 570ns PC=000a IR=0011, SW=0000, A=  101 SP=xxxx LR=xxxx
+ 590ns PC=000b IR=17f3, SW=0000, A=  101 SP=xxxx LR=xxxx
+ 610ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 630ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen e
+ 650ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 670ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 690ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 710ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 730ns PC=0003 IR=07f1, SW=0000, A=  108 SP=xxxx LR=xxxx
+ 750ns PC=0004 IR=1011, SW=0000, A=  108 SP=xxxx LR=xxxx
+ 770ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 790ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = l
+ 810ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 830ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 850ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+ 870ns PC=000a IR=0011, SW=0000, A=  108 SP=xxxx LR=xxxx
+ 890ns PC=000b IR=17f3, SW=0000, A=  108 SP=xxxx LR=xxxx
+ 910ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 930ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen l
+ 950ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 970ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+ 990ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+1010ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+1030ns PC=0003 IR=07f1, SW=0000, A=  108 SP=xxxx LR=xxxx
+1050ns PC=0004 IR=1011, SW=0000, A=  108 SP=xxxx LR=xxxx
+1070ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+1090ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = o
+1110ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+1130ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+1150ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+1170ns PC=000a IR=0011, SW=0000, A=  108 SP=xxxx LR=xxxx
+1190ns PC=000b IR=17f3, SW=0000, A=  108 SP=xxxx LR=xxxx
+1210ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+1230ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen l
+1250ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+1270ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+1290ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+1310ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+1330ns PC=0003 IR=07f1, SW=0000, A=  111 SP=xxxx LR=xxxx
+1350ns PC=0004 IR=1011, SW=0000, A=  111 SP=xxxx LR=xxxx
+1370ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+1390ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key =
+1410ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+1430ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+1450ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+1470ns PC=000a IR=0011, SW=0000, A=  111 SP=xxxx LR=xxxx
+1490ns PC=000b IR=17f3, SW=0000, A=  111 SP=xxxx LR=xxxx
+1510ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+1530ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen o
+1550ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+1570ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+1590ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+1610ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+1630ns PC=0003 IR=07f1, SW=0000, A=   32 SP=xxxx LR=xxxx
+1650ns PC=0004 IR=1011, SW=0000, A=   32 SP=xxxx LR=xxxx
+1670ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+1690ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = v
+1710ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+1730ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+1750ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+1770ns PC=000a IR=0011, SW=0000, A=   32 SP=xxxx LR=xxxx
+1790ns PC=000b IR=17f3, SW=0000, A=   32 SP=xxxx LR=xxxx
+1810ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+1830ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen
+1850ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+1870ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+1890ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+1910ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+1930ns PC=0003 IR=07f1, SW=0000, A=  118 SP=xxxx LR=xxxx
+1950ns PC=0004 IR=1011, SW=0000, A=  118 SP=xxxx LR=xxxx
+1970ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+1990ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = e
+2010ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+2030ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+2050ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+2070ns PC=000a IR=0011, SW=0000, A=  118 SP=xxxx LR=xxxx
+2090ns PC=000b IR=17f3, SW=0000, A=  118 SP=xxxx LR=xxxx
+2110ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+2130ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen v
+2150ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+2170ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+2190ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+2210ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+2230ns PC=0003 IR=07f1, SW=0000, A=  101 SP=xxxx LR=xxxx
+2250ns PC=0004 IR=1011, SW=0000, A=  101 SP=xxxx LR=xxxx
+2270ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+2290ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = r
+2310ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+2330ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+2350ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+2370ns PC=000a IR=0011, SW=0000, A=  101 SP=xxxx LR=xxxx
+2390ns PC=000b IR=17f3, SW=0000, A=  101 SP=xxxx LR=xxxx
+2410ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+2430ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen e
+2450ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+2470ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+2490ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+2510ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+2530ns PC=0003 IR=07f1, SW=0000, A=  114 SP=xxxx LR=xxxx
+2550ns PC=0004 IR=1011, SW=0000, A=  114 SP=xxxx LR=xxxx
+2570ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+2590ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = i
+2610ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+2630ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+2650ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+2670ns PC=000a IR=0011, SW=0000, A=  114 SP=xxxx LR=xxxx
+2690ns PC=000b IR=17f3, SW=0000, A=  114 SP=xxxx LR=xxxx
+2710ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+2730ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen r
+2750ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+2770ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+2790ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+2810ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+2830ns PC=0003 IR=07f1, SW=0000, A=  105 SP=xxxx LR=xxxx
+2850ns PC=0004 IR=1011, SW=0000, A=  105 SP=xxxx LR=xxxx
+2870ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+2890ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = l
+2910ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+2930ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+2950ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+2970ns PC=000a IR=0011, SW=0000, A=  105 SP=xxxx LR=xxxx
+2990ns PC=000b IR=17f3, SW=0000, A=  105 SP=xxxx LR=xxxx
+3010ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+3030ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen i
+3050ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+3070ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+3090ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+3110ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+3130ns PC=0003 IR=07f1, SW=0000, A=  108 SP=xxxx LR=xxxx
+3150ns PC=0004 IR=1011, SW=0000, A=  108 SP=xxxx LR=xxxx
+3170ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+3190ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = o
+3210ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+3230ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+3250ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+3270ns PC=000a IR=0011, SW=0000, A=  108 SP=xxxx LR=xxxx
+3290ns PC=000b IR=17f3, SW=0000, A=  108 SP=xxxx LR=xxxx
+3310ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+3330ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen l
+3350ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+3370ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+3390ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+3410ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+3430ns PC=0003 IR=07f1, SW=0000, A=  111 SP=xxxx LR=xxxx
+3450ns PC=0004 IR=1011, SW=0000, A=  111 SP=xxxx LR=xxxx
+3470ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+3490ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = g
+3510ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+3530ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+3550ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+3570ns PC=000a IR=0011, SW=0000, A=  111 SP=xxxx LR=xxxx
+3590ns PC=000b IR=17f3, SW=0000, A=  111 SP=xxxx LR=xxxx
+3610ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+3630ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen o
+3650ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+3670ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+3690ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx
+3710ns PC=0002 IR=b000, SW=0000, A=    1 SP=xxxx LR=xxxx
+3730ns PC=0003 IR=07f1, SW=0000, A=  103 SP=xxxx LR=xxxx
+3750ns PC=0004 IR=1011, SW=0000, A=  103 SP=xxxx LR=xxxx
+3770ns PC=0005 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+3790ns PC=0006 IR=17f0, SW=0000, A=    0 SP=xxxx LR=xxxx
+key = !
+3810ns PC=0007 IR=07f2, SW=0000, A=    0 SP=xxxx LR=xxxx
+3830ns PC=0008 IR=0010, SW=0000, A=    0 SP=xxxx LR=xxxx
+3850ns PC=0009 IR=b007, SW=0000, A=    0 SP=xxxx LR=xxxx
+3870ns PC=000a IR=0011, SW=0000, A=  103 SP=xxxx LR=xxxx
+3890ns PC=000b IR=17f3, SW=0000, A=  103 SP=xxxx LR=xxxx
+3910ns PC=000c IR=f001, SW=0000, A=    1 SP=xxxx LR=xxxx
+3930ns PC=000d IR=17f2, SW=0000, A=    1 SP=xxxx LR=xxxx
+screen g
+3950ns PC=000e IR=a000, SW=0000, A=    1 SP=xxxx LR=xxxx
+3970ns PC=0000 IR=07f0, SW=0000, A=    1 SP=xxxx LR=xxxx
+3990ns PC=0001 IR=9010, SW=0000, A=    1 SP=xxxx LR=xxxx</code></pre>
+<h3 id="結語-3"><a href="#結語-3">結語</a></h3>
+<p>以上的輸出入方式，並非典型的設計，而是屬於「系統單晶片」(SOC) 的設計方式，因此直接將「鍵盤」與「螢幕」的 輸出入暫存器直接內建在 MCU0 的記憶體之內，這樣的設計會比將「輸出入控制卡」與「CPU」分開的方式更容易一些， 但是由於這種 ASIC 的量產費用昂貴，所以目前還很少有這種設計方式。</p>
+<p>不過、就簡單性而言，這樣的設計確實非常簡單，因此符合「開放電腦計畫」的 Keep it Simple and Stupid (KISS) 原則， 所以我們先介紹這樣一個簡易的輸出入設計方式，以便讓讀者能從最簡單的架構入手。</p>
+<h1 id="雜誌訊息"><a href="#雜誌訊息">雜誌訊息</a></h1>
+<h2 id="讀者訂閱"><a href="#讀者訂閱">讀者訂閱</a></h2>
+<p>程式人雜誌是一個結合「開放原始碼與公益捐款活動」的雜誌，簡稱「開放公益雜誌」。開放公益雜誌本著「讀書做善事、寫書做公益」的精神，我們非常歡迎程式人認養專欄、或者捐出您的網誌，如果您願意成為本雜誌的專欄作家，請加入 <a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌社團</a> 一同共襄盛舉。</p>
+<p>我們透過發行這本雜誌，希望讓大家可以讀到想讀的書，學到想學的技術，同時也讓寫作的朋友的作品能產生良好價值 – 那就是讓讀者根據雜誌的價值捐款給慈善團體。 讀雜誌做公益也不需要有壓力，您不需要每讀一本就急著去捐款，您可以讀了十本再捐，或者使用固定的月捐款方式，當成是雜誌訂閱費，或者是季捐款、一年捐一次等都 OK ! 甚至是單純當個讀者我們也都很歡迎！</p>
+<p>本雜誌每期參考價：NT 50 元，如果您喜歡本雜誌，請將書款捐贈公益團體。例如可捐贈給「羅慧夫顱顏基金會 彰化銀行(009) 帳號：5234-01-41778-800」。(若匯款要加註可用「程式人雜誌」五個字)</p>
+<h2 id="投稿須知"><a href="#投稿須知">投稿須知</a></h2>
+<p><em>給專欄寫作者：</em> 做公益不需要有壓力。如果您願意撰寫專欄，您可以輕鬆的寫，如果當月的稿件出不來，我們會安排其他稿件上場。</p>
+<p><em>給網誌捐贈者：</em> 如果您沒時間寫專欄或投稿，沒關係，只要將您的網誌以 [創作共用的「姓名標示、非商業性、相同方式分享」授權] 並通知我們，我們會自動從中選取需要的文章進行編輯，放入適當的雜誌當中出刊。</p>
+<p><em>給文章投稿者：</em> 程式人雜誌非常歡迎您加入作者的行列，如果您想撰寫任何文章或投稿，請用 markdown 或 LibreOffice 編輯好您的稿件，並於每個月 25 日前投稿到<a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌社團</a> 的檔案區，我們會盡可能將稿件編入隔月1號出版程式人雜誌當中，也歡迎您到社團中與我們一同討論。</p>
+<p>如果您要投稿給程式人雜誌，我們最希望的格式是採用 markdown 的格式撰寫，然後將所有檔按壓縮為 zip 上傳到社團檔案區給我們， 如您想學習 markdown 的撰寫出版方式，可以參考 <a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201304/htm/video1.html">看影片學 markdown 編輯出版流程</a> 一文。</p>
+<p>如果您無法採用 markdown 的方式撰寫，也可以直接給我們您的稿件，像是 MS. Word 的 doc 檔或 LibreOffice 的 odt 檔都可以，我們 會將這些稿件改寫為 markdown 之後編入雜誌當中。</p>
+<h2 id="參與編輯"><a href="#參與編輯">參與編輯</a></h2>
+<p>您也可以擔任程式人雜誌的編輯，甚至創造一個全新的公益雜誌，我們誠摯的邀請您加入「開放公益出版」的行列，如果您想擔任編輯或創造新雜誌，也歡迎到 <a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌社團</a> 來與我們討論相關事宜。</p>
+<h2 id="公益資訊"><a href="#公益資訊">公益資訊</a></h2>
+<table>
+<col width="22%" />
+<col width="20%" />
+<col width="28%" />
+<col width="28%" />
+<thead>
+<tr class="header">
+<th align="left">公益團體</th>
+<th align="left">聯絡資訊</th>
+<th align="left">服務對象</th>
+<th align="left">捐款帳號</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">財團法人羅慧夫顱顏基金會</td>
+<td align="left"><a href="http://www.nncf.org/">http://www.nncf.org/</a> <BR/> <script type="text/javascript">
+<!--
+h='&#110;&#110;&#x63;&#102;&#46;&#x6f;&#114;&#x67;';a='&#64;';n='&#108;&#x79;&#110;&#110;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#108;&#x79;&#110;&#110;&#32;&#x61;&#116;&#32;&#110;&#110;&#x63;&#102;&#32;&#100;&#x6f;&#116;&#32;&#x6f;&#114;&#x67;</noscript> <BR/> 02-27190408分機 232</td>
+<td align="left">顱顏患者 (如唇顎裂、小耳症或其他罕見顱顏缺陷）</td>
+<td align="left">銀行：009彰化銀行民生分行<BR/> 帳號：5234-01-41778-800</td>
+</tr>
+<tr class="even">
+<td align="left">社團法人台灣省兒童少年成長協會</td>
+<td align="left"><a href="http://www.cyga.org/">http://www.cyga.org/</a> <BR/> <script type="text/javascript">
+<!--
+h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x63;&#x79;&#x67;&#x61;&#x39;&#x39;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x63;&#x79;&#x67;&#x61;&#x39;&#x39;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript> <BR/> 04-23058005</td>
+<td align="left">單親、隔代教養.弱勢及一般家庭之兒童青少年</td>
+<td align="left">銀行：新光銀行 <BR/> 戶名：台灣省兒童少年成長協會 <BR/> 帳號：103-0912-10-000212-0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="footer">
+<a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌</a> ，採用 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/ ">創作共用：姓名標示、相同方式分享</a> 授權，歡迎加入 <a href="https://www.facebook.com/groups/programmerMagazine/">雜誌社團</a>
+</div>
+</body>
+</html>
