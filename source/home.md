@@ -25,7 +25,7 @@
     * [OpenNI 2 基本程式範例 (作者：Heresy Ku)](article2.html)
     * [根號求解 (作者：研發養成所 Bridan)](article3.html)
     * [Visual Basic 6.0:大整數運算-加法與乘法 (使用 Array 字串) (作者：廖憲得 0xde)](article4.html)
-    * [開放電腦計畫 (8) – 16 位元微控制器 MCU0 的中斷處理 (作者：陳鍾誠)](article5.html)
+    * [開放電腦計畫 (9) – 16 位元微控制器 MCU0 的輸出入 -- 輪詢篇 (作者：陳鍾誠)](article5.html)
 * [雜誌訊息](info.html)
 
 ### 雜誌取得
